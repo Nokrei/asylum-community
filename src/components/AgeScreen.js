@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useSpring, animated, config } from "react-spring";
 import "./AgeScreen.scss";
 
 const AgeScreen = () => {
-  const [fade,setFade] = useState({
+  const [fade, setFade] = useState({
     reset: false,
-    reverse:false
-  })
+    reverse: false,
+  });
   const fadeFromUp = useSpring({
     from: {
       marginTop: -200,
@@ -18,12 +18,12 @@ const AgeScreen = () => {
     },
     config: {
       duration: 200,
-      
     },
-    reset:fade.reset,
-      reverse:fade.reverse
+    reset: fade.reset,
+    reverse: fade.reverse,
+    delay:200
   });
-  
+
   const fadeDown = useSpring({
     from: {
       marginTop: 400,
@@ -34,18 +34,19 @@ const AgeScreen = () => {
       opacity: 1,
     },
     config: {
-      duration: 200, 
+      duration: 200,
     },
-    reset:fade.reset,
-      reverse:fade.reverse
+    reset: fade.reset,
+    reverse: fade.reverse,
+    delay:100
   });
-  
-  const handleConfirmClick = () =>{
-   setFade({
-     reset:true,
-     reverse:true
-   })
-  }
+
+  const handleConfirmClick = () => {
+    setFade({
+      reset: true,
+      reverse: true,
+    });
+  };
 
   return (
     <div className="age-screen">
@@ -61,10 +62,12 @@ const AgeScreen = () => {
           ARE YOU OVER <br />
           18 YEARS OLD
         </animated.div>
-     
-       
+
         <animated.div style={fadeDown} className="age-text__answer">
-          <div className="age-text__answer__item age-text__answer__confirm" onClick={handleConfirmClick}>
+          <div
+            className="age-text__answer__item age-text__answer__confirm"
+            onClick={handleConfirmClick}
+          >
             IM 18+
             <span class="Mask">
               <span>IM 18+</span>
@@ -73,7 +76,10 @@ const AgeScreen = () => {
               <span>IM 18+</span>
             </span>
           </div>
-          <div className="age-text__answer__item age-text__answer__deny" onClick={handleConfirmClick}>
+          <div
+            className="age-text__answer__item age-text__answer__deny"
+            onClick={handleConfirmClick}
+          >
             NO
             <span class="Mask">
               <span>NO</span>
