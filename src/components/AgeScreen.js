@@ -1,6 +1,6 @@
 import React from "react";
 import "./AgeScreen.scss";
-import backgroundVid from "../resources/background.mov";
+
 const AgeScreen = () => {
   return (
     <div className="age-screen">
