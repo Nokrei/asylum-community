@@ -1,0 +1,43 @@
+// === Settings =====
+%font-settings {
+    font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+  }
+.deny-text {
+    @extend %font-settings;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 3rem;
+  }
+  .deny-text__big--colored{
+      color:#570808
+  }
+  .deny-text__medium{
+    color:#570808;
+      font-size: 1.5rem;
+      line-height: 0.5rem;
+  }
+  .deny-text__small{
+    font-size: 1rem;
+    line-height: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .deny-text {
+      font-size: 3rem
+  }
+  .deny-text__medium{
+      font-size: 1rem
+  }
+  .deny-text__small{
+   font-size: 0.7rem;
+  }
+}

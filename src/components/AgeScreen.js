@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import DelayLink from 'react-delay-link';
 import { useSpring, animated, config } from "react-spring";
 import "./AgeScreen.scss";
 
@@ -11,34 +13,38 @@ const AgeScreen = () => {
     from: {
       marginTop: -200,
       opacity: 0,
+      visibility: "visible",
     },
     to: {
       marginTop: 0,
       opacity: 1,
+      visibility: "visible",
     },
     config: {
       duration: 200,
     },
     reset: fade.reset,
     reverse: fade.reverse,
-    delay:200
+    delay: 200,
   });
 
   const fadeDown = useSpring({
     from: {
       marginTop: 400,
       opacity: 0,
+      visibility: "hidden",
     },
     to: {
       marginTop: 0,
       opacity: 1,
+      visibility: "visible",
     },
     config: {
       duration: 200,
     },
     reset: fade.reset,
     reverse: fade.reverse,
-    delay:100
+    delay: 100,
   });
 
   const handleConfirmClick = () => {
@@ -50,13 +56,6 @@ const AgeScreen = () => {
 
   return (
     <div className="age-screen">
-      <video autoPlay muted loop className="background-vid">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2013-09/small_watermarked/OMSBG5_preview.webm"
-          type="video/mp4"
-        />
-      </video>
-      <div className="top-text">Asylum 669</div>
       <div className="age-text">
         <animated.div style={fadeFromUp} className="age-text__question">
           ARE YOU OVER <br />
@@ -64,6 +63,7 @@ const AgeScreen = () => {
         </animated.div>
 
         <animated.div style={fadeDown} className="age-text__answer">
+        <DelayLink to='approved' delay={700} replace={false}>
           <div
             className="age-text__answer__item age-text__answer__confirm"
             onClick={handleConfirmClick}
@@ -76,6 +76,8 @@ const AgeScreen = () => {
               <span>IM 18+</span>
             </span>
           </div>
+          </DelayLink>
+          <DelayLink to='denied' delay={700} replace={false}>
           <div
             className="age-text__answer__item age-text__answer__deny"
             onClick={handleConfirmClick}
@@ -88,6 +90,8 @@ const AgeScreen = () => {
               <span>NO</span>
             </span>
           </div>
+          </DelayLink>
+        
         </animated.div>
       </div>
     </div>
