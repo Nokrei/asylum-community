@@ -17,13 +17,37 @@
     font-weight: bold;
     text-transform: uppercase;
     line-height: 3rem;
+    height:100vh;
+    
   }
   .approve-text__medium{
-    
       font-size: 1.5rem;
       line-height: 0.5rem;
   }
- 
+  .circle-container{
+    width:100%;
+    position: relative;
+    top:10px
+  }
+  .circle{
+    left:50%;
+    position: absolute;
+    margin:auto;
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+    background-color:red;
+  }
+  .circle-one{
+    background-color:red;
+  }
+  .circle-two{
+    background-color:blue;
+  }
+  .circle-three{
+    background-color:yellow;
+  }
+
   @media only screen and (max-width: 600px) {
     .approve-text {
         font-size: 3rem

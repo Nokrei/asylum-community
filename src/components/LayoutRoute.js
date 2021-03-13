@@ -4,7 +4,7 @@ import "./Layout.scss";
 import AsylumLogo from '../images/Asylum_Neon.png'
 const LayoutRoute = (props) => {
     return (
-<React.Fragment>
+<React.Fragment >
 <video autoPlay muted loop className="background-vid">
         <source
           src="https://static.videezy.com/system/resources/previews/000/038/701/original/stockvideo_01785.mp4"
