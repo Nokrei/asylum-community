@@ -16,12 +16,12 @@ const ApproveEntry = () => {
 
   return (
     <animated.div style={fadeIn} className="approve-text">
-      <span className="approve-text__big">
-        Welcome! 
+      <span className="white-font">
+        Whalecum...
       </span>
       <br />
-      <span className="approve-text__medium">
-        Congratz on being a big boy / girl / other
+      <span className="approve-text__medium accent-font">
+        To the dark side
       </span>
       <br />
     </animated.div>

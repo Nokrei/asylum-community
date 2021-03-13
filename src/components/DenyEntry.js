@@ -17,15 +17,15 @@ const DenyEntry = () => {
   return (
     <animated.div style={fadeIn} className="deny-text">
       <span className="deny-text__big">
-        Sorry <span className="deny-text__big--colored">Kido!</span>
+       <span className='white-font'>Sorry</span>  <span className="accent-font">Kiddo!</span>
       </span>
       <br />
-      <span className="deny-text__medium">
-        This is a big boys (and girls!) club
+      <span className="deny-text__medium accent-font">
+        This is an 18+ zone only
       </span>
       <br />
-      <span className="deny-text__small">
-        Do come back in the future though
+      <span className="deny-text__small white-font">
+        come back when you're 18 or above
       </span>
       <br />
     </animated.div>

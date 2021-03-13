@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import AppContext from "./AppContext";
 import LayoutRoute from "./LayoutRoute";
-import "./App.css";
+import "./App.scss";
 import AgeScreen from "./AgeScreen";
 import DenyEntry from "./DenyEntry";
 import ApproveEntry from "./ApproveEntry";

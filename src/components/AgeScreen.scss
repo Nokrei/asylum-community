@@ -3,7 +3,7 @@ $perspective: 60rem;
 $font-size: 4.25rem;
 $split-position: 49%;
 $split-thickness: 4px;
-$split-color: #ff2c75;
+$split-color: #DAA3A5;
 
 // === Settings =====
 %font-settings {
@@ -46,10 +46,11 @@ $split-color: #ff2c75;
 }
 .age-text__question {
   line-height: 5rem;
+  color:rgb(226, 226, 226)
 }
 
 .age-text__answer {
-  line-height: 1.2;
+  line-height: 2;
   text-transform: uppercase;
   text-align: center;
   display: flex;
