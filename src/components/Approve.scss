@@ -29,7 +29,8 @@
   top: 10px;
 }
 .circle {
-  left: 50%;
+  left: 0;
+  right: 0;
   position: absolute;
   margin: auto;
   width: 10px;
@@ -38,6 +39,21 @@
   background-color: red;
   opacity: 0;
 }
+.eye-container {
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+.eye {
+  width:8rem;
+  animation: eye-animation 5s infinite linear;
+}
+@keyframes eye-animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .circle-initial {
   @extend .circle;
   opacity: 1;
@@ -45,11 +61,11 @@
 }
 .circle-one {
   @extend .circle;
-  background-color: #b2696e;
+  background-color: black;
 }
 .circle-one__animated {
   @extend .circle;
-  background-color: #b2696e;
+  background-color: black;
   animation: circle-one 1000ms forwards;
 }
 @keyframes circle-one {
@@ -94,20 +110,20 @@
 }
 @keyframes circle-three {
   0% {
-    transform: scale(0);opacity: 1;
+    transform: scale(0);
+    opacity: 1;
   }
   100% {
-    transform: scale(500);opacity: 1;
+    transform: scale(500);
+    opacity: 1;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .approve-text {
     font-size: 3rem;
-    
   }
   .approve-text__medium {
     font-size: 1rem;
-    
   }
 }
