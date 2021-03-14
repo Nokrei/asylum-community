@@ -63,7 +63,7 @@ const AgeScreen = () => {
           OR OLDER
         </animated.div>
 
-        <animated.div style={fadeDown} className="age-text__answer">
+        <animated.div style={fadeDown} className="age-text__answer accent-font">
           <DelayLink to="approved" delay={700} replace={false}>
             <div
               className="age-text__answer__item age-text__answer__confirm"

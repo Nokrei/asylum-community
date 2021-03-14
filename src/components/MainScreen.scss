@@ -1,0 +1,23 @@
+.main-screen{
+    background-color: #2B272D;
+    height:100vh
+}
+.top-nav {
+    text-align: center;
+    width: 70%;
+    margin:auto;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display:flex;
+    justify-content: space-around;
+    
+  }
+  .top-nav__logo{
+    height: 5rem;
+  }
+  .top-nav__item{
+    align-self: center;
+    text-transform: uppercase;
+    color: #B2696E
+  }

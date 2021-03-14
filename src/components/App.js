@@ -13,16 +13,26 @@ import "./App.scss";
 import AgeScreen from "./AgeScreen";
 import DenyEntry from "./DenyEntry";
 import ApproveEntry from "./ApproveEntry";
+import MainScreen from "./MainScreen";
+
 
 function App() {
+
+  const [globalState, setGlobalState] = useState({
+    changeLaout: false
+  })
   return (
-    <HashRouter>
+    <AppContext.Provider value={[globalState, setGlobalState]}>
+       <HashRouter>
       <Switch>
-        <LayoutRoute path="/" exact={true} component={AgeScreen} />
-        <LayoutRoute path="/denied" exact={true} component={DenyEntry} />
-        <LayoutRoute path="/approved" exact={true} component={ApproveEntry} />
+        <LayoutRoute path="/" exact={true} component={AgeScreen} logo='visible'/>
+        <LayoutRoute path="/denied" exact={true} component={DenyEntry} logo='visible'/>
+        <LayoutRoute path="/approved" exact={true} component={ApproveEntry} logo='visible'/>
+        <LayoutRoute path="/main" exact={true} component={MainScreen} logo='hidden' />
       </Switch>
     </HashRouter>
+    </AppContext.Provider>
+   
   );
 }
 
