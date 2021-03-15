@@ -22,7 +22,8 @@ function App() {
     changeLaout: false
   })
   return (
-    <AppContext.Provider value={[globalState, setGlobalState]}>
+    <div className='App'>
+      <AppContext.Provider value={[globalState, setGlobalState]}>
        <HashRouter>
       <Switch>
         <LayoutRoute path="/" exact={true} component={AgeScreen} logo='visible'/>
@@ -32,6 +33,8 @@ function App() {
       </Switch>
     </HashRouter>
     </AppContext.Provider>
+    </div>
+    
    
   );
 }

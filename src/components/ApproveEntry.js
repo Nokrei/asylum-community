@@ -9,6 +9,11 @@ const ApproveEntry = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [scale, setScale] = useState(1);
   const [textScale, setTextScale] = useState(6);
+  const [mobileScale, setMobileScale] = useState(0);
+  const [touchData, setTouchData] = useState({
+    start: 0,
+    end: 0,
+  });
   const onWheel = (e) => {
     if (e.deltaY > 0) {
       setScale(scale + 1);
@@ -22,8 +27,32 @@ const ApproveEntry = () => {
       setScale(0);
     }
   };
-  console.log("scale: " + scale);
-  console.log("text: " + textScale);
+  const touchStart = (e) => {
+    setTouchData({
+      start: e.changedTouches[0].clientY,
+      end: 0,
+    });
+  };
+  const touchEnd = (e) => {
+    setTouchData({
+      ...touchData,
+      end: e.changedTouches[0].clientY,
+    });
+  };
+  useEffect(() => {
+    if (touchData.start !== 0 && touchData.end !== 0) {
+      if (touchData.start - touchData.end > 0) {
+        setScale(scale + 1);
+      setTextScale(textScale - 1);
+      } else if (touchData.start - touchData.end < 0) {
+        setScale(scale - 1);
+        setTextScale(textScale + 1);
+      }
+    }
+  }, [touchData]);
+   console.log(mobileScale);
+  // console.log("scale: " + scale);
+  // console.log("text: " + textScale);
   const fadeIn = useSpring({
     from: {
       opacity: 0,
@@ -60,12 +89,20 @@ const ApproveEntry = () => {
     setAnimationComplete(true);
   };
   animationComplete && <Redirect to="/main" />;
-  console.log(animationComplete);
+
   return (
-    <div onWheel={onWheel}>
+    <div
+      className="approve-container"
+      onWheel={onWheel}
+      onTouchStart={touchStart}
+      onTouchEnd={touchEnd}
+    >
       {!animationComplete ? (
         <animated.div style={fadeIn} className="approve-text">
-          <span className="white-font" style={{ fontSize: `${textScale <= 6 && textScale}rem` }}>
+          <span
+            className="white-font"
+            style={{ fontSize: `${textScale <= 6 && textScale}vw` }}
+          >
             Whalecum
           </span>
           <br />
@@ -88,14 +125,16 @@ const ApproveEntry = () => {
           <br />
           <br />
           <span
-            style={{ fontSize: `calc(${textScale <= 6 && textScale}rem - 4.5rem)` }}
+            style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 3vw)` }}
             className="approve-text__medium accent-font"
           >
             To the dark side
           </span>
           <br />
 
-          <p style={{ fontSize: `calc(${textScale <= 6 && textScale}rem - 5rem)` }}>
+          <p
+            style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 4vw)` }}
+          >
             Scroll Down
           </p>
         </animated.div>
