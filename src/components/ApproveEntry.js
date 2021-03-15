@@ -8,10 +8,22 @@ const ApproveEntry = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
   const [animationComplete, setAnimationComplete] = useState(false);
   const [scale, setScale] = useState(1);
+  const [textScale, setTextScale] = useState(6);
   const onWheel = (e) => {
-    e.deltaY > 0 ? setScale(scale + 1) : setScale(scale - 1);
+    if (e.deltaY > 0) {
+      setScale(scale + 1);
+      setTextScale(textScale - 1);
+    } else {
+      setScale(scale - 1);
+      setTextScale(textScale + 1);
+    }
+    if (textScale > 6) {
+      setTextScale(6);
+      setScale(0);
+    }
   };
-  console.log(scale);
+  console.log("scale: " + scale);
+  console.log("text: " + textScale);
   const fadeIn = useSpring({
     from: {
       opacity: 0,
@@ -53,11 +65,16 @@ const ApproveEntry = () => {
     <div onWheel={onWheel}>
       {!animationComplete ? (
         <animated.div style={fadeIn} className="approve-text">
-          <span className="white-font">Whalecum</span>
+          <span className="white-font" style={{ fontSize: `${textScale <= 6 && textScale}rem` }}>
+            Whalecum
+          </span>
           <br />
-          <br/>
+          <br />
           <div className="circle-container">
-          <div className="eye-container" style={{ transform: `scale(${scale > 0 && scale})` }}>
+            <div
+              className="eye-container"
+              style={{ transform: `scale(${scale > 0 && scale})` }}
+            >
               <img className="eye" src={eye} />
             </div>
             <div className={state.one}></div>
@@ -67,17 +84,20 @@ const ApproveEntry = () => {
               onAnimationEnd={handleAnimationEnd}
             ></div>
           </div>
-          
-            <br/>
-            <br/>
-          <span className="approve-text__medium accent-font">
+
+          <br />
+          <br />
+          <span
+            style={{ fontSize: `calc(${textScale <= 6 && textScale}rem - 4.5rem)` }}
+            className="approve-text__medium accent-font"
+          >
             To the dark side
           </span>
           <br />
-          
-          <p style={{ fontSize: "1rem" }}>Scroll Down</p>
 
-         
+          <p style={{ fontSize: `calc(${textScale <= 6 && textScale}rem - 5rem)` }}>
+            Scroll Down
+          </p>
         </animated.div>
       ) : (
         <Redirect to="/main" />
