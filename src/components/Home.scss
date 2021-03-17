@@ -1,0 +1,44 @@
+// === Settings =====
+%font-settings {
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+.home-text__big {
+  
+  cursor: none;
+  @extend %font-settings;
+  width: 60%;
+  margin: auto;
+  padding-top: 8rem;
+  text-align: left;
+  font-size: 10vw;
+  text-transform: uppercase;
+  background: radial-gradient(
+      circle 60px at var(--x, 0) var(--y, 0),
+      #2B272D 99%,
+      #e5e5e5 100%
+    )
+    fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.home-text__container ::before {
+  content: "";
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  border: 3px solid black;
+}

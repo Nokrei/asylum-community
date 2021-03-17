@@ -14,10 +14,13 @@ $split-color: #B2696E;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
 }
-
+html,body{
+  overflow:visible 
+}
 .age-screen {
   height: 100vh;
   @extend %font-settings;
+  overflow:visible
 }
 .background-vid {
   position: fixed;

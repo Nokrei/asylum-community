@@ -28,8 +28,8 @@ function App() {
       <Switch>
         <LayoutRoute path="/" exact={true} component={AgeScreen} logo='visible'/>
         <LayoutRoute path="/denied" exact={true} component={DenyEntry} logo='visible'/>
-        <LayoutRoute path="/approved" exact={true} component={ApproveEntry} logo='visible'/>
-        <LayoutRoute path="/main" exact={true} component={MainScreen} logo='hidden' />
+        <LayoutRoute path="/approved" exact={true} component={ApproveEntry} logo='visible' overflow='hidden'/>
+        <LayoutRoute path="/main" exact={true} component={MainScreen} logo='hidden' overflow='auto'/>
       </Switch>
     </HashRouter>
     </AppContext.Provider>

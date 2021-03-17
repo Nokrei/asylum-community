@@ -6,14 +6,22 @@ import eye from "../images/eye.png";
 import "./Approve.scss";
 const ApproveEntry = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
+
+  // To transition to next screen after animation
   const [animationComplete, setAnimationComplete] = useState(false);
+
+  // Variables for image and text animations
   const [scale, setScale] = useState(1);
   const [textScale, setTextScale] = useState(6);
+
+   // Variables for image and text animations for mobile
   const [mobileScale, setMobileScale] = useState(0);
   const [touchData, setTouchData] = useState({
     start: 0,
     end: 0,
   });
+
+  // Function to trigger on mousewheel (not on scroll - overflow hidden)
   const onWheel = (e) => {
     if (e.deltaY > 0) {
       setScale(scale + 1);
@@ -27,6 +35,8 @@ const ApproveEntry = () => {
       setScale(0);
     }
   };
+
+  // Functions to trigger on mobile to simulate mousewheel
   const touchStart = (e) => {
     setTouchData({
       start: e.changedTouches[0].clientY,
@@ -50,9 +60,12 @@ const ApproveEntry = () => {
       }
     }
   }, [touchData]);
+
    console.log(mobileScale);
   // console.log("scale: " + scale);
   // console.log("text: " + textScale);
+
+  // React spring animation for initial fade in
   const fadeIn = useSpring({
     from: {
       opacity: 0,
@@ -65,11 +78,14 @@ const ApproveEntry = () => {
     },
   });
 
+  // Variables that contain class names for circle elements
   const [state, setState] = useState({
     one: "circle-one",
     two: "circle-two",
     three: "circle-three",
   });
+
+  // Assign animated classes to circle elements when the eye reaches desired size
   useEffect(() => {
     if (scale > 5) {
       setState({
@@ -85,6 +101,8 @@ const ApproveEntry = () => {
       changeLayout: true,
     });
   };
+
+  // Execute redirect
   const handleAnimationEnd = () => {
     setAnimationComplete(true);
   };
@@ -131,7 +149,7 @@ const ApproveEntry = () => {
             To the dark side
           </span>
           <br />
-
+          <br/>
           <p
             style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 4vw)` }}
           >

@@ -7,7 +7,12 @@
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
 }
-
+html,body{
+  overflow: hidden !important
+}
+.approve-container{
+  overflow: hidden
+}
 .approve-text {
   @extend %font-settings;
   position: absolute;
@@ -26,8 +31,10 @@
 }
 .circle-container {
   width: 100%;
+ 
   position: relative;
   top: 10px;
+  
 }
 .circle {
   left: 0;
