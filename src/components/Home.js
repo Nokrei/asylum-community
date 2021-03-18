@@ -35,7 +35,7 @@ const Home = () => {
         onMouseMove={handleMouseMove}
         className="white-font home-text__big mask"
       >
-        We Are <br /> Asylum 669
+        join the <br /> madness
       </div>
     </div>
   );
