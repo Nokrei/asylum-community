@@ -8,12 +8,38 @@ import four1 from "../images/four1.png";
 import four2 from "../images/four2.png";
 import nonToxic from "../images/nonToxic.png";
 import typos from "../images/typos.png";
+import eliza from "../images/eliza.png";
+import nefarius from "../images/nefarius.png";
+import twinkle from "../images/twinkle.png";
 const Staff = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
   console.log(globalState.scrollPosition);
-  const offset = 0.5;
+  const offset = 0.2;
   return (
     <div className="staff-container">
+      <StaffCard
+        style={{
+          transform: `translate(${globalState.scrollPosition * -offset}px)`,
+        }}
+        img={eliza}
+        class="staff-card__image"
+        title="Eliza"
+        desc="Ello Gamers, You have come to the right place! I am Eliza, I am the owner of this madness and nothing happens here without my knowledge. 
+        Gaming alone sucks, so don't do it alone silly, come on in!"
+      />{" "}
+      <StaffCard
+        style={{
+          transform: `translate(${globalState.scrollPosition * offset}px)`,
+          flexDirection:'row-reverse'
+        }}
+        img={nefarius}
+        class="staff-card__image"
+       
+        title="Nefarius"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae bibendum enim. 
+      Proin cursus auctor hendrerit.  Duis at odio non libero finibus feugiat a ut urna. 
+      In finibus aliquam auctor."
+      />
       <StaffCard
         style={{
           transform: `translate(${globalState.scrollPosition * -offset}px)`,
@@ -31,10 +57,10 @@ const Staff = () => {
       <StaffCard
         style={{
           transform: `translate(${globalState.scrollPosition * offset}px)`,
+          flexDirection:'row-reverse'
         }}
         img={nonToxic}
         class="staff-card__image"
-       
         title="NonToxic"
         desc="A Smart person knows that a Tomato is a Fruit, but a wise person knows not to add into a fruit Salad. 
         I am known as NonToxic, I am Married for almost 15 years, I have 2 Children and I am a Gamer for Life.
@@ -44,21 +70,21 @@ const Staff = () => {
       <StaffCard
         style={{
           transform: `translate(${globalState.scrollPosition * -offset}px)`,
-          gridAutoFlow: "dense",
         }}
         img={four1}
         img2={four2}
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
-        title="DAV"
-        desc="Hey, mane name is Fours or more commonly DAV/Dave, im an IT-Student from 
+        title="FoursAreLife"
+        desc="Hey, mane name is Fours or more commonly DAV / Dave, im an IT - Student from 
         Austria and spend way too much thime on the Internet and playing Destiny. My job is 
-        mostly recruiting and hosting Server-events."
+        mostly recruiting and hosting Server-events.
+        "
       />
-
       <StaffCard
         style={{
           transform: `translate(${globalState.scrollPosition * offset}px)`,
+          flexDirection:'row-reverse'
         }}
         img={typos}
         class="staff-card__image"
@@ -67,6 +93,15 @@ const Staff = () => {
         I'm Sirtypos here with the mods to assist, I make emojis, some are questionable, 
         turned into a life coach, hope no lives ruined in the process, and having an interesting experience!
         so come on in, meet new friends & get comfy!"
+      />
+      <StaffCard
+        style={{
+          transform: `translate(${globalState.scrollPosition * -offset}px)`,
+        }}
+        img={twinkle}
+        class="staff-card__image"
+        title="Twinkle"
+        desc="Hey I'm Twinkle (Twonkle,Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'"
       />
     </div>
   );
