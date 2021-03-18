@@ -1,5 +1,11 @@
 body{
   background-color: #2B272D;
+  
+}
+.main-screen{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height:100vh
 }
 .top-nav {
     text-align: center;

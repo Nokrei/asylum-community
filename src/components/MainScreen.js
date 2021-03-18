@@ -1,13 +1,20 @@
-import React, {useRef} from "react";
+import React, { useState, useEffect, useContext } from "react";
+import AppContext from './AppContext';
 import { useSpring, animated, config } from "react-spring";
 import AsylumLogo from "../images/Asylum_Neon.png";
 import "./MainScreen.scss";
 import Home from "./Home";
-import Staff from './Staff'
+import Staff from "./Staff";
 const MainScreen = () => {
-const handleScroll = (e) =>{
-  console.log(e);
-}
+  const [globalState, setGlobalState] = useContext(AppContext)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const handleScroll = (e) => {
+    setGlobalState({scrollPosition: e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight});
+  };
+  useEffect(()=>{
+    console.log(scrollPosition);
+  },[scrollPosition])
+
   const fadeIn = useSpring({
     from: {
       opacity: 0,
@@ -20,7 +27,7 @@ const handleScroll = (e) =>{
     },
   });
   return (
-    <div onScroll={handleScroll} className="main-screen" >
+    <div onScroll={handleScroll} className="main-screen">
       <animated.div style={fadeIn}>
         <div className="top-nav">
           <span className="top-nav__item">about us</span>
@@ -30,11 +37,8 @@ const handleScroll = (e) =>{
           <span className="top-nav__item">join us</span>
         </div>
         <Home />
-        
-       
-        <Staff/>
-       
-        
+      
+        <Staff />
       </animated.div>
     </div>
   );

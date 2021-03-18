@@ -1,52 +1,66 @@
 .staff-container {
-  margin-top: 5rem;
+  margin-top: 30rem;
   background-color: #2b272d;
 }
 .staff-card {
+    padding-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
   margin: auto;
   position: relative;
+  column-gap: 1rem;
 }
 .staff-card__image {
   max-width: 100%;
   height: auto;
-  animation: image1-animation 10s infinite  
+}
+.staff-card__image--animated {
+  max-width: 100%;
+  height: auto;
+  animation: image1-animation 10s infinite;
 }
 .staff-card__image2 {
   position: absolute;
   max-width: 50%;
   height: auto;
   left: 0;
-  animation: image2-animation 10s infinite  ;
 }
-@keyframes image1-animation{
-    0%{
-        opacity:1
-    }
-    50%{
-        opacity:0
-    }
-    100%{
-        opacity:1
-    }
+.staff-card__image2--animated {
+  position: absolute;
+  max-width: 50%;
+  height: auto;
+  left: 0;
+  animation: image2-animation 10s infinite;
 }
-@keyframes image2-animation{
-    0%{
-        opacity:0
-    }
-    50%{
-        opacity:1
-    }
-    100%{
-        opacity:0
-    }
+@keyframes image1-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+@keyframes image2-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .staff-card__text--title {
   font-size: 3vw;
 }
 .staff-card__text--desc {
-  font-size: 1vw;
+  font-size: 0.9vw;
   text-align: justify;
+  
 }
