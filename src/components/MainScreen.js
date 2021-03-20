@@ -5,7 +5,7 @@ import AsylumLogo from "../images/Asylum_Neon.png";
 import "./MainScreen.scss";
 import Home from "./Home";
 import Staff from "./Staff";
-import brick from "../images/brick.png";
+import brick from "../images/brick.jpg";
 const MainScreen = () => {
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
