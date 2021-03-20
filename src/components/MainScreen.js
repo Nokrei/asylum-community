@@ -5,7 +5,7 @@ import AsylumLogo from "../images/Asylum_Neon.png";
 import "./MainScreen.scss";
 import Home from "./Home";
 import Staff from "./Staff";
-import brick from "../images/brick.jpg";
+import brick from "../images/brick.png";
 const MainScreen = () => {
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
@@ -39,11 +39,11 @@ const MainScreen = () => {
       duration: 500,
     },
   });
-  
+
   return (
     <div
       onScroll={handleScroll}
-      style={{ backgroundImage: `url(${brick})` }}
+      style={{ backgroundImage: `url(${brick}) `, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover' }}
       className="main-screen"
       id="main"
     >
