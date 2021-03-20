@@ -1,6 +1,6 @@
 // === Settings =====
 %font-settings {
-  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-family: "Berkshire Swash", system-ui, cursive;
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -10,7 +10,7 @@
 
 .home-text__big {
   
-  cursor: none;
+  //cursor: none;
   @extend %font-settings;
   width: 60%;
   margin: auto;
@@ -18,27 +18,27 @@
   text-align: center;
   font-size: 10vw;
   text-transform: uppercase;
-  background: radial-gradient(
-      circle 60px at var(--x, 0) var(--y, 0),
-      #2B272D 99%,
-      #e5e5e5 100%
-    )
-    fixed;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  // background: radial-gradient(
+  //     circle 60px at var(--x, 0) var(--y, 0),
+  //     #2B272D 99%,
+  //     #e5e5e5 100%
+  //   )
+  //   fixed;
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // color: transparent;
+  // -webkit-text-fill-color: transparent;
 }
-.home-text__container ::before {
-  content: "";
-  position: fixed;
-  width: 120px;
-  height: 120px;
-  background: #e5e5e5;
-  border-radius: 50%;
-  top: var(--y, 0);
-  left: var(--x, 0);
-  transform: translate(-50%, -50%);
-  z-index: -2;
+// .home-text__container ::before {
+//   content: "";
+//   position: fixed;
+//   width: 120px;
+//   height: 120px;
+//   background: #e5e5e5;
+//   border-radius: 50%;
+//   top: var(--y, 0);
+//   left: var(--x, 0);
+//   transform: translate(-50%, -50%);
+//   z-index: -2;
  
-}
+// }

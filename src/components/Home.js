@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import "./Home.scss";
-const Home = () => {
+const Home = (props) => {
   // State variables to store mouse position.
   const [mousePosition, setMousePosition] = useState({
     positionY: 0,
@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="home-text__container">
       <div
-        onMouseMove={handleMouseMove}
+        style={props.style}
         className="white-font home-text__big mask"
       >
         join the <br /> madness

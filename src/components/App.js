@@ -19,6 +19,7 @@ import MainScreen from "./MainScreen";
 function App() {
   const [globalState, setGlobalState] = useState({
     changeLaout: false,
+   
     scrollPosition: 0
   });
   return (

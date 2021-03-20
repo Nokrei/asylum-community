@@ -1,18 +1,19 @@
 .staff-container {
   margin-top: 30rem;
-  background-color: #2b272d;
+  
 }
 .staff-card {
     padding-top: 1rem;
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 60%;
   margin: auto;
   position: relative;
 }
 .staff-card__text{
     margin-left: 1rem;
     margin-right: 1rem;
+    background-color: rgba($color: #000000, $alpha: 0.3);
 }
 .staff-card__image {
   max-width: 17vw;
@@ -67,4 +68,28 @@
   text-align: justify;
   white-space: pre-wrap
   
+}
+@media only screen and (max-width: 600px){
+  .staff-container {
+    margin-top: 100vh;
+    
+  }
+  .staff-card {
+  display:grid;
+  justify-items: center;
+  width:90vw;
+}
+.staff-card__image {
+  max-width: 90vw;
+  height: auto;
+}
+.staff-card__text--title {
+  font-size: 3rem;
+}
+.staff-card__text--desc {
+  font-size: 1rem;
+  text-align: justify;
+  white-space: pre-wrap
+  
+}
 }
