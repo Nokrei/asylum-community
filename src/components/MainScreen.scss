@@ -1,6 +1,5 @@
 body{
   background-color: #2B272D;
-  
 }
 .main-screen{
   overflow-y: auto;
@@ -16,7 +15,11 @@ body{
     font-weight: bold;
     display:flex;
     justify-content: space-around;
-    
+    position: fixed;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 9999;
   }
   .top-nav__logo{
     height: 5rem;
@@ -25,4 +28,8 @@ body{
     align-self: center;
     text-transform: uppercase;
     color: #B2696E
+  }
+  .top-nav a{
+    text-decoration: none;
+    color:inherit
   }

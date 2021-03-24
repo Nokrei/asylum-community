@@ -17,7 +17,7 @@ const Staff = () => {
   
   const offset = 0.3;
   return (
-    <div className="staff-container">
+    <div className="staff-container" id='staff'>
       <StaffCard
         style={{
           transform: `translateX(${globalState.scrollPosition * -offset}px)`,
@@ -42,7 +42,7 @@ const Staff = () => {
         arbiter of corruption-fuelled justice, possessor of several Ph.D.s in Nothing, 
         life coach if things are going too well and last but not least your average guy 
         who never should have been given any power or authority over more than himself 
-        so naturally a perfect fit for 2nd in charge.."
+        so naturally a perfect fit for 2nd in charge..."
       />
       <StaffCard
         style={{
