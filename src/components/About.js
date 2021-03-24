@@ -17,7 +17,7 @@ const About = () => {
     })
 
 
-    return <animated.div className='about white-font' id='about'>
+    return <animated.div className='about white-font' id='about' >
 <h1>We are Asylum 669 Server Boost Level 3 </h1>
 <br/><br/>
 COMMUNITY GAMING FRIENDSHIP MOVIES GIVEAWAYS E-GIRLS NSFW CUSTOM EMOJIS?

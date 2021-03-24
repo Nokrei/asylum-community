@@ -45,7 +45,7 @@ const MainScreen = () => {
   return (
     <div
       onScroll={handleScroll}
-      style={{ backgroundImage: `url(${brick}) `, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover' }}
+     
       className="main-screen"
       id="main"
     >
