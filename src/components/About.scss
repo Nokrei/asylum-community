@@ -1,11 +1,68 @@
-.about{
-    width: 70%;
-    margin:auto;
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: rgba($color: #000000, $alpha: 0.1);
-   
+.about {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 100vh;
+  position: relative;
+  padding-top: 25vh;
 }
-.about ul{
-    list-style-position: inside;
+.about__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.about ul {
+  list-style-position: inside;
+}
+.about__slide {
+  width: 100%;
+  position: absolute;
+  bottom:20vh;
+}
+.about__slide--one {
+   bottom: 25vh
+}
+.about__slide--one span{
+    line-height: 3rem;
+}
+.about__slide--two{
+    width:50%;
+    left:0;
+    right:0;
+    margin: auto;
+}
+
+.button__container {
+  position: absolute;
+  bottom: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about__slide--button {
+  cursor: pointer;
+  background-color: transparent;
+  border:none;
+  color:#9fb5db;
+  font-size: 2rem;
+}
+.circle__container {
+  display: flex;
+  width: 5%;
+}
+.button__circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #b2696e;
+  margin: auto;
+  cursor: pointer;
+}
+.button__circle--active {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #9fb5db;
+  margin: auto;
+  cursor: pointer;
 }
