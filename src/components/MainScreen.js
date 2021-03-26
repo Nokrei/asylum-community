@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-import {HashLink as Link} from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import { useSpring, animated, config } from "react-spring";
 import AsylumLogo from "../images/Asylum_Neon.png";
 import "./MainScreen.scss";
 import Home from "./Home";
-import About from './About'
+import About from "./About";
 import Staff from "./Staff";
 import brick from "../images/brick.jpg";
 const MainScreen = () => {
@@ -43,23 +43,22 @@ const MainScreen = () => {
   });
 
   return (
-    <div
-      onScroll={handleScroll}
-     
-      className="main-screen"
-      id="main"
-    >
+    <div onScroll={handleScroll} className="main-screen" id="main">
       <div style={{ backgroundColor: "rgba(0,0,0,0.6)" }}>
         <animated.div style={fadeIn}>
           <div className="top-nav">
-            <span className="top-nav__item"><Link to='/main#about'>about us</Link></span>
-            <span className="top-nav__item"><Link to='/main#staff'>staff</Link></span>
+            <span className="top-nav__item">
+              <Link to="/main#about">about us</Link>
+            </span>
+            <span className="top-nav__item">
+              <Link to="/main#staff">staff</Link>
+            </span>
             <img className="top-nav__logo" src={AsylumLogo} />
             <span className="top-nav__item">events</span>
             <span className="top-nav__item">join us</span>
           </div>
           <Home style={{ opacity: ` ${1 - checkScroll * 7} ` }} />
-      <About/>
+          <About />
           <Staff />
         </animated.div>
       </div>

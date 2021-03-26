@@ -75,10 +75,10 @@ const Staff = () => {
           flexDirection: "row-reverse",
         }}
         img={nonToxic}
-        border={{ borderColor:'#9fb5db'}}
+        border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="NonToxic"
-        tag='@NonToxic#1809'
+        tag="@NonToxic#1809"
         titleColor={{ color: "#9fb5db" }}
         desc="A Smart person knows that a Tomato is a Fruit, but a wise person knows not to add into a fruit Salad. 
         I am known as NonToxic, I am Married for almost 15 years, I have 2 Children and I am a Gamer for Life.
@@ -91,11 +91,11 @@ const Staff = () => {
         }}
         img={four1}
         img2={four2}
-        border={{ borderColor:'#9fb5db'}}
+        border={{ borderColor: "#9fb5db" }}
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
         title="FoursAreLife"
-        tag='@FoursAreLife#4444'
+        tag="@FoursAreLife#4444"
         titleColor={{ color: "#9fb5db" }}
         desc="Hey, mane name is Fours or more commonly DAV / Dave, im an IT - Student from 
         Austria and spend way too much thime on the Internet and playing Destiny. My job is 
@@ -108,7 +108,7 @@ const Staff = () => {
           flexDirection: "row-reverse",
         }}
         img={typos}
-        border={{ borderColor:'#9fb5db'}}
+        border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="SirTypos"
         tag="@SirTypos#7891"
@@ -123,10 +123,10 @@ const Staff = () => {
           transform: `translate(${globalState.scrollPosition * -offset}px)`,
         }}
         img={twinkle}
-        border={{ borderColor:'#9fb5db'}}
+        border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="Twinkle"
-        tag='@TwinkleToes#7587'
+        tag="@TwinkleToes#7587"
         titleColor={{ color: "#9fb5db" }}
         desc="Hey I'm Twinkle (Twonkle,Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />

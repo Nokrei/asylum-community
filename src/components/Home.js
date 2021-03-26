@@ -26,15 +26,12 @@ const Home = (props) => {
       "--y",
       mousePosition.positionY + "px"
     );
-  //  console.log(mousePosition);
+    //  console.log(mousePosition);
   }, [mousePosition]);
 
   return (
     <div className="home-text__container">
-      <div
-        style={props.style}
-        className="white-font home-text__big mask"
-      >
+      <div style={props.style} className="white-font home-text__big mask">
         join the <br /> madness
       </div>
     </div>

@@ -140,19 +140,21 @@ const About = () => {
   };
   return (
     <animated.div className="about white-font" id="about">
-        <span className='about__title accent-font'><h1>About Us</h1></span>
+      <span className="about__title accent-font">
+        <h1>About Us</h1>
+      </span>
+      <div className='about__container'>
       <div
         className="about__slide about__slide--one"
         style={{ visibility: visibility.one }}
       >
         <h1>We are Asylum 669 </h1>
-        
-       <span><h1>Server Boost Level 3</h1></span> 
-       
-        
-       Like a phoenix we rise from the ashes!
+        <span>
+          <h1>Server Boost Level 3</h1>
+        </span>
+        Like a phoenix we rise from the ashes!
         <br />
-       <br/>
+        <br />
         COMMUNITY GAMING FRIENDSHIP MOVIES GIVEAWAYS E-GIRLS NSFW CUSTOM EMOJIS?
         <br />
         <br />
@@ -203,7 +205,7 @@ const About = () => {
       </div>
       <div className="button__container">
         <button onClick={handlePrev} className="about__slide--button">
-        {'<'}
+          {"<"}
         </button>
         <div className="circle__container">
           <div onClick={handleCircleOne} className={circleClass.one}></div>
@@ -212,9 +214,11 @@ const About = () => {
         </div>
 
         <button onClick={handleNext} className="about__slide--button">
-         {'>'}
+          {">"}
         </button>
       </div>
+      </div>
+     
     </animated.div>
   );
 };
