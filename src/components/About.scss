@@ -13,7 +13,7 @@
 }
 .about__container{
     position: relative;
-    height:60vh;
+    height:50vh;
     display: flex;
     align-items: center;
 }
@@ -56,19 +56,19 @@
 }
 .circle__container {
   display: flex;
-  width: 5%;
+  width: 5vw;
 }
 .button__circle {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   background-color: #b2696e;
   margin: auto;
   cursor: pointer;
 }
 .button__circle--active {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   background-color: #9fb5db;
   margin: auto;

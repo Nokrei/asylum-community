@@ -7,7 +7,7 @@ import "./MainScreen.scss";
 import Home from "./Home";
 import About from "./About";
 import Staff from "./Staff";
-import brick from "../images/brick.jpg";
+import Testimonials from './Testimonials';
 const MainScreen = () => {
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
@@ -60,6 +60,7 @@ const MainScreen = () => {
           <Home style={{ opacity: ` ${1 - checkScroll * 7} ` }} />
           <About />
           <Staff />
+          <Testimonials/>
         </animated.div>
       </div>
     </div>

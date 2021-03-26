@@ -1,0 +1,21 @@
+.testimonials{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+}
+.testimonial-container{
+    width:70%;
+    margin:auto;
+    font-size: 2rem;
+    text-align: justify;
+    animation: testimonial 10s infinite linear;
+}
+.testimonial{
+    
+}
+@keyframes testimonial{
+    0%{opacity: 0;transform: translateX(100%);}
+    5%{opacity:1;transform: translateX(0%)}
+    95%{opacity:1;transform: translateX(0%) }
+    100%{opacity:0;transform: translateX(-100%)}
+}
