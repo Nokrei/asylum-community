@@ -17,7 +17,7 @@ const Staff = () => {
   // Get values for translate on scroll animation from global state (MainScreen)
   const [globalState, setGlobalState] = useContext(AppContext);
 
-  const offset = 0.3;
+  const offset = 0.15;
   return (
     <div className="staff-container" id="staff">
       <span className="staff-title accent-font">
