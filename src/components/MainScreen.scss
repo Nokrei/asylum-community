@@ -11,7 +11,7 @@ body{
     width: 70%;
     margin:auto;
     padding: 1rem 0 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     display:flex;
     justify-content: space-around;
@@ -23,11 +23,10 @@ body{
     background-color: rgba($color: #111012, $alpha: 0.9);
   }
   .top-nav__logo{
-    height: 5rem;
+    height: 4rem;
   }
   .top-nav__item{
     align-self: center;
-    text-transform: uppercase;
     color: #B2696E
   }
   .top-nav a{

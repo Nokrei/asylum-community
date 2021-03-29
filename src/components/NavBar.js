@@ -9,16 +9,16 @@ const NavBar = (props) => {
   return (
     <div style={props.style} className="top-nav">
       <span className="top-nav__item">
-        <Link to="/main#about">about us</Link>
+        <Link to="/main#about">About Us</Link>
       </span>
       <span className="top-nav__item">
-        <Link to="/main#staff">staff</Link>
+        <Link to="/main#staff">Staff</Link>
       </span>
       <img className="top-nav__logo" src={AsylumLogo} />
       <span className="top-nav__item">
-        <Link to="/main#testimonials">testimonials</Link>
+        <Link to="/main#testimonials">Testimonials</Link>
       </span>
-      <span className="top-nav__item">join us</span>
+      <span className="top-nav__item">Join Us</span>
     </div>
   );
 };
