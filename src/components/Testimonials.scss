@@ -1,21 +1,23 @@
 .testimonials{
-    height: 100vh;
-    display:flex;
-    align-items: center;
+    position: relative;
+}
+.testimonials__title{
+    position: absolute;
+    display: flex;
+    text-transform: uppercase;
+    width:100%;
+    justify-content: center;
+    top:20vh;
+    font-size: 2rem;
 }
 .testimonial-container{
     width:70%;
+    height: 100vh;
     margin:auto;
-    font-size: 2rem;
-    text-align: justify;
-    animation: testimonial 10s infinite linear;
-}
-.testimonial{
+    font-size: 1vw;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
     
-}
-@keyframes testimonial{
-    0%{opacity: 0;transform: translateX(100%);}
-    5%{opacity:1;transform: translateX(0%)}
-    95%{opacity:1;transform: translateX(0%) }
-    100%{opacity:0;transform: translateX(-100%)}
 }
