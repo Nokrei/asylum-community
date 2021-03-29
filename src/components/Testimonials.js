@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, useTransition, animated, config } from "react-spring";
-import ScrollContainer from 'react-indiana-drag-scroll'
+import ScrollContainer from "react-indiana-drag-scroll";
 import "./App.scss";
 import "./Testimonials.scss";
-import TestimonialCard from './TestimonialCard'
+import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
   // Former option with useTransition
   // // array of testimonials
@@ -57,29 +57,47 @@ const Testimonials = () => {
   //     {item.text}
   //   </animated.div>
   // ))}
-  const [cursorStyle, setCursorStyle] = useState('grab')
+  const [cursorStyle, setCursorStyle] = useState("grab");
 
-  const handleMouseDown = ()=>{
-    setCursorStyle('grabbing')
-  }
-  const handleMouseUp = () =>{
-    setCursorStyle('grab')
-  }
+  const handleMouseDown = () => {
+    setCursorStyle("grabbing");
+  };
+  const handleMouseUp = () => {
+    setCursorStyle("grab");
+  };
 
   return (
     <div className="testimonials white-font" id="testimonials">
-      <span className="testimonials__title accent-font">
+      <span className="testimonials__title accent-font creepy-font">
         <h1>Testimonials</h1>
       </span>
-      <ScrollContainer hideScrollbars='false' onStartScroll={handleMouseDown} onEndScroll={handleMouseUp} style={{cursor:cursorStyle}} className="testimonial-container">
-      <TestimonialCard title='One' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Two' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Three' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Four' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Five' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Six' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Seven' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
-      <TestimonialCard title='Eight' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque neque libero, mollis eget justo ut, condimentum gravida nisi. Vivamus commodo hendrerit metus, a dapibus odio fermentum non. Aenean ut nibh turpis. Praesent in nisl lectus. Maecenas vel lectus neque. Cras vel aliquet mauris. Morbi posuere nisl quis nibh eleifend semper. Etiam sed luctus nisi, id vehicula libero. Nullam nec arcu vehicula ligula venenatis condimentum a quis erat. Aenean id maximus enim. Curabitur vitae mollis sem, euismod laoreet ipsum. Curabitur in dignissim nisi.'/>
+      <ScrollContainer
+        hideScrollbars="false"
+        onStartScroll={handleMouseDown}
+        onEndScroll={handleMouseUp}
+        style={{ cursor: cursorStyle }}
+        className="testimonial-container"
+      >
+        <TestimonialCard
+          title="Pudding"
+          content='"I was covered in whalecum, had a great time, would recommend!"'
+        />
+        <TestimonialCard
+          title="Fruit"
+          content='"I only joined the server a few weeks ago but already feel like I have made a load of good friends, 
+                    if you are looking for a great 18+ community, stop looking and join"'
+        />
+        <TestimonialCard
+          title="Anonymous (Says Oak)"
+          content="'I used to think I was innocent. Then I found heaven and heaven's name is Asylum 669'"
+        />
+        <TestimonialCard
+          title="Armour/Gonk"
+          content="When it comes to Asylum 669, I feel very at peace as everyone is so delightful and welcoming. The owner is 
+          a respectful, non-biased indivdual and takes pride in what she does for her community. I feel proud to be apart of 
+          something amazing, it makes me never go AFK in a voice channel!"
+        />
+       
       </ScrollContainer>
     </div>
   );

@@ -20,7 +20,7 @@ const Staff = () => {
   const offset = 0.15;
   return (
     <div className="staff-container" id="staff">
-      <span className="staff-title accent-font">
+      <span className="staff-title accent-font creepy-font">
         <h1>Staff</h1>
       </span>
       <br />

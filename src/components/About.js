@@ -139,7 +139,7 @@ const About = () => {
   };
   return (
     <div className="about white-font" id="about">
-      <span className="about__title accent-font">
+      <span className="about__title accent-font creepy-font">
         <h1>About Us</h1>
       </span>
       <div className="about__container">

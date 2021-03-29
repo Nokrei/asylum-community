@@ -7,7 +7,7 @@ const NavBar = (props) => {
 
   
   return (
-    <div style={props.style} className="top-nav">
+    <div style={props.style} className="top-nav accent-font">
       <span className="top-nav__item">
         <Link to="/main#about">About Us</Link>
       </span>
