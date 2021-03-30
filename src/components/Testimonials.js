@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, useTransition, animated, config } from "react-spring";
 import ScrollContainer from "react-indiana-drag-scroll";
+import Slider from "infinite-react-carousel";
 import "./App.scss";
 import "./Testimonials.scss";
 import TestimonialCard from "./TestimonialCard";
@@ -59,46 +60,86 @@ const Testimonials = () => {
   // ))}
   const [cursorStyle, setCursorStyle] = useState("grab");
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (e) => {
     setCursorStyle("grabbing");
   };
   const handleMouseUp = () => {
     setCursorStyle("grab");
   };
 
+  //Array of testimonials and their authors
+  const testimonialArr = [
+    {
+      title: "Pudding",
+      content:
+        "'I was covered in whalecum, had a great time, would recommend!'",
+    },
+    {
+      title: "Fruit",
+      content:
+        "'I only joined the server a few weeks ago but already feel like I have made a load of good friends, if you are looking for a great 18+ community, stop looking and join.'",
+    },
+    {
+      title: "Anonymous (Says Oak)",
+      content:
+        "'I used to think I was innocent. Then I found heaven and heaven's name is Asylum 669.'",
+    },
+    {
+      title: "Armour/Gonk",
+      content:
+        "'When it comes to Asylum 669, I feel very at peace as everyone is so delightful and welcoming. The owner is a respectful, non-biased indivdual and takes pride in what she does for her community. I feel proud to be apart of something amazing, it makes me never go AFK in a voice channel!'",
+    },
+    {
+      title: "Krabjii",
+      content:
+        "'its hella fun beign here, people are so welcoming, everyone is friendy.'",
+    },
+    {
+      title: "Pudding",
+      content:
+        "'I was covered in whalecum, had a great time, would recommend!'",
+    },
+    {
+      title: "Phex",
+      content:
+        "'Was lured here with promises of feet pictures and wasn't disappointed.'",
+    },
+    {
+      title: "Miz",
+      content:
+        "'With the ongoing pandemic, it has not been easy to go hangout and make new friends. Asylum 669 is a completely diversecommunity that makes it easier to not only make new friends, but feel like you're part of an extended family. And the best part? It's full of gamers sexy gamers!'",
+    },
+    {
+      title: "LuckyOwl",
+      content:
+        "'I like the fact that I can be a part of this server it is a lot of fun. it's a really close community and even tho I just been part off the community for a couple days it has been already a lot off fun.'",
+    },
+    { title: "NonToxic", content: "'This place dope.'" },
+  ];
   return (
     <div className="testimonials white-font" id="testimonials">
       <span className="testimonials__title accent-font creepy-font">
         <h1>Testimonials</h1>
       </span>
-      <ScrollContainer
-        hideScrollbars="false"
-        onStartScroll={handleMouseDown}
-        onEndScroll={handleMouseUp}
+      <div
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
         style={{ cursor: cursorStyle }}
         className="testimonial-container"
       >
-        <TestimonialCard
-          title="Pudding"
-          content='"I was covered in whalecum, had a great time, would recommend!"'
-        />
-        <TestimonialCard
-          title="Fruit"
-          content='"I only joined the server a few weeks ago but already feel like I have made a load of good friends, 
-                    if you are looking for a great 18+ community, stop looking and join"'
-        />
-        <TestimonialCard
-          title="Anonymous (Says Oak)"
-          content="'I used to think I was innocent. Then I found heaven and heaven's name is Asylum 669'"
-        />
-        <TestimonialCard
-          title="Armour/Gonk"
-          content="When it comes to Asylum 669, I feel very at peace as everyone is so delightful and welcoming. The owner is 
-          a respectful, non-biased indivdual and takes pride in what she does for her community. I feel proud to be apart of 
-          something amazing, it makes me never go AFK in a voice channel!"
-        />
-       
-      </ScrollContainer>
+        <Slider dots slidesToShow="4" centerMode="true" wheel="true">
+          {testimonialArr.map((testimonial) => {
+            return (
+              <div>
+                <TestimonialCard
+                  title={testimonial.title}
+                  content={testimonial.content}
+                />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };
