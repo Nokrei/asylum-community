@@ -11,6 +11,7 @@ import Home from "./Home";
 import About from "./About";
 import Staff from "./Staff";
 import Testimonials from "./Testimonials";
+import Emojis from './Emojis'
 const MainScreen = () => {
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
@@ -62,6 +63,7 @@ const MainScreen = () => {
           <About />
           <Staff />
           <Testimonials />
+          <Emojis/>
         </animated.div>
       </div>
     </div>

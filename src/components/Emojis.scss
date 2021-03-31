@@ -1,0 +1,13 @@
+.emojis{
+    height:30vh;
+    display: grid;
+    width:100%;
+    margin:auto;
+    grid-template-columns:repeat(auto-fill, minmax(10vw, 1fr)) ;
+    grid-auto-rows: 7vw;
+    justify-items: center;
+}
+.emoji{
+    max-width: 5vw;
+    height:auto
+}

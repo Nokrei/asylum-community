@@ -147,9 +147,11 @@ const Testimonials = () => {
       >
         <Slider
           slidesToShow={numOfSlides}
+          dots
           centerMode
           wheel
-          centerPadding="0"
+          dotsScroll={numOfSlides}
+          centerPadding={0}
           arrows={false}
         >
           {testimonialArr.map((testimonial) => {
