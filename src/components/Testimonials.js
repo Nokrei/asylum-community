@@ -1,11 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, useTransition, animated, config } from "react-spring";
-import ScrollContainer from "react-indiana-drag-scroll";
 import Slider from "infinite-react-carousel";
+import useWindowDimensions from "./useWindowDimensions";
 import "./App.scss";
 import "./Testimonials.scss";
 import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
+  // Get client width from custom hook
+  const { width } = useWindowDimensions();
+
+  // Setting state in useEffect makes Slider crash, setting state alone - to many re-renders
+  // Therefore re-asigning new values to numOfSlides variable with if / else.
+  let numOfSlides = 4;
+
+  if (width < 2000 && width > 1500) {
+    numOfSlides = 3;
+  } else if (width < 1500) {
+    numOfSlides = 2;
+  }
+
   // Former option with useTransition
   // // array of testimonials
   // const slides = [
@@ -58,16 +71,18 @@ const Testimonials = () => {
   //     {item.text}
   //   </animated.div>
   // ))}
+
+  // Set cursor style on mouse down and mouse up
   const [cursorStyle, setCursorStyle] = useState("grab");
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = () => {
     setCursorStyle("grabbing");
   };
   const handleMouseUp = () => {
     setCursorStyle("grab");
   };
 
-  //Array of testimonials and their authors
+  // Array of testimonials and their authors
   const testimonialArr = [
     {
       title: "Pudding",
@@ -94,6 +109,7 @@ const Testimonials = () => {
       content:
         "'its hella fun beign here, people are so welcoming, everyone is friendy.'",
     },
+    { title: "NonToxic", content: "'This place dope.'" },
     {
       title: "Pudding",
       content:
@@ -114,8 +130,14 @@ const Testimonials = () => {
       content:
         "'I like the fact that I can be a part of this server it is a lot of fun. it's a really close community and even tho I just been part off the community for a couple days it has been already a lot off fun.'",
     },
-    { title: "NonToxic", content: "'This place dope.'" },
+
+    {
+      title: "Celestial",
+      content:
+        "'I have enjoyed my stay thus far and im totally not having a knife on my neck writing this but I would like to admit before the judges of asylum669 that they are the role models of the depths of hell that I reside in.'",
+    },
   ];
+
   return (
     <div className="testimonials white-font" id="testimonials">
       <span className="testimonials__title accent-font creepy-font">
@@ -123,19 +145,24 @@ const Testimonials = () => {
       </span>
       <div
         onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
+        onMouseUpCapture={handleMouseUp}
         style={{ cursor: cursorStyle }}
         className="testimonial-container"
       >
-        <Slider dots slidesToShow="4" centerMode="true" wheel="true">
+        <Slider
+          slidesToShow={numOfSlides}
+          centerMode
+          wheel
+          centerPadding="0"
+          arrows={false}
+        >
           {testimonialArr.map((testimonial) => {
             return (
-              <div>
-                <TestimonialCard
-                  title={testimonial.title}
-                  content={testimonial.content}
-                />
-              </div>
+              <TestimonialCard
+                key={testimonial.title}
+                title={testimonial.title}
+                content={testimonial.content}
+              />
             );
           })}
         </Slider>

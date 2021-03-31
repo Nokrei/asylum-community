@@ -26,8 +26,9 @@ const MainScreen = () => {
   const handleScroll = debounce((e) => {
     setGlobalState({
       scrollPosition:
-        e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop,
+        e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop ,
     });
+  
     const currentScrollPos = e.target.scrollTop;
     setVisible(
       (prevScrollPos > currentScrollPos +10  ) ||
@@ -36,7 +37,7 @@ const MainScreen = () => {
     setPrevScrollPos(currentScrollPos)
     
     setCheckscroll(e.target.scrollTop / globalState.scrollPosition);
-    
+    console.log(globalState.scrollPosition);
   },1);
 
   // Spring animation for initial fade-in
