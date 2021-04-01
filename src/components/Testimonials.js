@@ -72,15 +72,7 @@ const Testimonials = () => {
   //   </animated.div>
   // ))}
 
-  // Set cursor style on mouse down and mouse up
-  const [cursorStyle, setCursorStyle] = useState("grab");
-
-  const handleMouseDown = () => {
-    setCursorStyle("grabbing");
-  };
-  const handleMouseUp = () => {
-    setCursorStyle("grab");
-  };
+  
 
   // Array of testimonials and their authors
   const testimonialArr = [
@@ -140,9 +132,7 @@ const Testimonials = () => {
         <h1>Testimonials</h1>
       </span>
       <div
-        onMouseDown={handleMouseDown}
-        onMouseUpCapture={handleMouseUp}
-        style={{ cursor: cursorStyle }}
+        
         className="testimonial-container"
       >
         <Slider
@@ -150,7 +140,7 @@ const Testimonials = () => {
           dots
           centerMode
           wheel
-          dotsScroll={numOfSlides}
+          
           centerPadding={0}
           arrows={false}
         >
