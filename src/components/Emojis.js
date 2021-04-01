@@ -4,8 +4,8 @@ import "./App.scss";
 import './Emojis.scss'
 import coinA from "../images/emojis/CoinA.png";
 import egirl from "../images/emojis/Egirl.png";
-import egirl2 from "../images/emojis/Egirl2.png";
-import eThot from "../images/emojis/EThot.png";
+import eliza1 from "../images/emojis/Eliza1.png";
+import eliza2 from "../images/emojis/Eliza2.png";
 import eThot2 from "../images/emojis/EThot2.png";
 import horny from "../images/emojis/Horny.png";
 import idiot from "../images/emojis/Idiot.png";
@@ -32,14 +32,14 @@ const Emojis = () => {
   const emojiArr = [
     coinA,
     egirl,
-    egirl2,
-    eThot,
+    eliza1,
+    eliza2,
     eThot2,
     horny,
     idiot,
     insanityBooster,
     noodzPing,
-    owo,
+    
     queen,
     simp,
     smol,
