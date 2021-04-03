@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "Nothing You Could Do", cursive;
-  src: local("Nothing You Could Do"),
-    url("../fonts/NothingYouCouldDo-Regular.ttf"), format("truetype");
+  font-family: "ThinkNothing";
+  src: local("ThinkNothing"), url(../fonts/ThinkNothing.otf) format("opentype");
 }
 // === Settings =====
 %font-settings {
@@ -33,4 +32,5 @@
 }
 .creepy-font {
   font-family: "Nothing You Could Do", cursive !important;
+  //font-family: "ThinkNothing";
 }

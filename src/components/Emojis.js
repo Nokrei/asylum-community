@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import AppContext from "./AppContext";
 import "./App.scss";
-import './Emojis.scss'
+import "./Emojis.scss";
 import coinA from "../images/emojis/CoinA.png";
 import egirl from "../images/emojis/Egirl.png";
 import eliza1 from "../images/emojis/Eliza1.png";
@@ -28,7 +28,7 @@ const Emojis = () => {
     globalState.scrollPosition < 100
       ? setEmojiClass("emoji-animated")
       : setEmojiClass("emoji");
-  });
+  }, [globalState.scrollPosition]);
   const emojiArr = [
     coinA,
     egirl,
@@ -39,7 +39,6 @@ const Emojis = () => {
     idiot,
     insanityBooster,
     noodzPing,
-    
     queen,
     simp,
     smol,
@@ -51,15 +50,20 @@ const Emojis = () => {
 
   return (
     <div className="emojis">
-      {emojiArr.map((emoji) => {
-        return (
-          <img
-            style={{ animationDelay: `${emojiArr.indexOf(emoji) / 20}s` }}
-            className={emojiClass}
-            src={emoji}
-          />
-        );
-      })}
+      <div className="emojis__container">
+        {emojiArr.map((emoji) => {
+          return (
+            <img
+              style={{ animationDelay: `${emojiArr.indexOf(emoji) / 20}s` }}
+              className={emojiClass}
+              src={emoji}
+            />
+          );
+        })}
+      </div>
+      <div className="emojis__title white-font">
+        Custom Emojis created by Rosa and SirTypos
+      </div>
     </div>
   );
 };

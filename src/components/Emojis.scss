@@ -1,31 +1,35 @@
-.emojis{
-    height:30vh;
-    display: grid;
-    width:70%;
-    margin:auto;
-    grid-template-columns:repeat(auto-fill, minmax(8vw, 1fr)) ;
-    grid-auto-rows: 7vw;
-    justify-items: center;
+.emojis {
+  height: 30vh;
+  width: 70%;
+  margin: auto;
+  text-align: center;
 }
-.emoji{
-    max-width: 5vw;
-    height:auto;
-    
-    opacity:0
+
+.emojis__container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr));
+  grid-auto-rows: 5vw;
+  justify-items: center;
 }
-.emoji-animated{
-    max-width: 5vw;
-    height:auto;
-    animation: emoji__animation 1000ms forwards;
-    opacity:0
+.emoji {
+  max-width: 4vw;
+  height: auto;
+  opacity: 0;
 }
-@keyframes emoji__animation{
-    0%{
-        opacity: 0;
-        transform: translateX(-100px)
-    };
-    100%{
-        opacity:1;
-        transform: translateX(0px)
-    }
+.emoji-animated {
+  max-width: 4vw;
+  height: auto;
+  animation: emoji__animation 500ms forwards;
+  opacity: 0;
+}
+@keyframes emoji__animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

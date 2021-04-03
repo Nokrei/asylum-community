@@ -52,23 +52,23 @@
   background-color: transparent;
   border: none;
   color: #9fb5db;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 .circle__container {
   display: flex;
   width: 5vw;
 }
 .button__circle {
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 100%;
   background-color: #b2696e;
   margin: auto;
   cursor: pointer;
 }
 .button__circle--active {
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 100%;
   background-color: #9fb5db;
   margin: auto;

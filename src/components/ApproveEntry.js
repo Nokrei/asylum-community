@@ -38,10 +38,7 @@ const ApproveEntry = () => {
 
   // Functions to trigger on mobile to simulate mousewheel
   const touchStart = (e) => {
-    setTouchData({
-      start: e.changedTouches[0].clientY,
-      end: 0,
-    });
+    setScale(6)
   };
   const touchEnd = (e) => {
     setTouchData({

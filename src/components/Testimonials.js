@@ -127,6 +127,7 @@ const Testimonials = () => {
         <Slider
           slidesToShow={numOfSlides}
           dots
+          dotsClass='carousel-dots '
           centerMode
           wheel
           centerPadding={0}

@@ -1,35 +1,43 @@
-body{
+body {
   background-color: #111012;
 }
-.main-screen{
+.main-screen {
   overflow-y: auto;
   overflow-x: hidden;
-  height:100vh
+  height: 100vh;
 }
 .top-nav {
-    text-align: center;
-    width: 70%;
-    margin:auto;
-    padding: 1rem 0 1rem 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display:flex;
-    justify-content: space-around;
-    position: fixed;
-    left:0;
-    right:0;
-    margin:auto;
-    z-index: 9999;
-    background-color: rgba($color: #111012, $alpha: 0.9);
-  }
-  .top-nav__logo{
-    height: 4rem;
-  }
-  .top-nav__item{
-    align-self: center;
-    
-  }
-  .top-nav a{
-    text-decoration: none;
-    color:inherit
-  }
+  text-align: center;
+  color: #111012;
+  width: 70%;
+  margin: auto;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  background-color: rgba($color: #111012, $alpha: 0.9);
+  text-shadow: 0 0 1px #b2696e, 0 0 2px #b2696e, 0 0 3px #b2696e,
+    0 0 4px #b2696e,  0 0 2px #b2696e, 0 0 2px #b2696e, 
+}
+.top-nav__logo {
+  height: 4rem;
+}
+.top-nav__item {
+  align-self: center;
+  transition-duration: 0.2s;
+}
+.top-nav__item:hover{
+  color: #b2696e;
+  text-shadow: 0 0 5px black, 0 0 7px #b2696e, 0 0 9px #b2696e,
+    0 0 10px #b2696e,  0 0 10px #b2696e, 0 0 40px #b2696e, 
+}
+.top-nav a {
+  text-decoration: none;
+  color: inherit;
+}
