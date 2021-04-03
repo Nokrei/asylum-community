@@ -8,6 +8,22 @@
   font-family: "ThinkNothing";
   src: local("ThinkNothing"), url(../fonts/ThinkNothing.otf) format("opentype");
 }
+@font-face {
+  font-family: "ForbidNothing";
+  src: local("ForbidNothing"), url(../fonts/ForbidNothing.otf) format("opentype");
+}
+@font-face {
+  font-family: "RavenSong";
+  src: local("RavenSong"), url(../fonts/RavenSong.otf) format("opentype");
+}
+@font-face {
+  font-family: "Moist";
+  src: local("Moist"), url(../fonts/Moist.otf) format("opentype");
+}
+@font-face {
+  font-family: "RaslaniHorrorz";
+  src: local("RaslaniHorrorz"), url(../fonts/RaslaniHorrorz.ttf) format("opentype");
+}
 // === Settings =====
 %font-settings {
   font-family: "Gilroy ExtraBold", system-ui, sans-serif;
@@ -31,6 +47,10 @@
   color: #9fb5db;
 }
 .creepy-font {
-  //font-family: "Nothing You Could Do", cursive !important;
-  font-family: "ThinkNothing";
+  font-family: "Nothing You Could Do", cursive ;
+  //font-family: "ThinkNothing";
+  //font-family: "ForbidNothing";
+  //font-family: "RavenSong";
+  //font-family: "Moist";
+  //font-family: "RaslaniHorrorz";
 }
