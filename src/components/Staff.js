@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import AppContext from "./AppContext";
 import { useSpring } from "react-spring";
+import useWindowDimensions from './useWindowDimensions'
 import "./App.scss";
 import "./Staff.scss";
 import StaffCard from "./StaffCard";
@@ -14,10 +15,14 @@ import eliza from "../images/eliza.png";
 import nefarius from "../images/nefarius.png";
 import twinkle from "../images/twinkle.png";
 const Staff = () => {
+  const {width} = useWindowDimensions()
   // Get values for translate on scroll animation from global state (MainScreen)
   const [globalState, setGlobalState] = useContext(AppContext);
-
-  const offset = 0.19;
+  const [offset, setOffset] = useState(0.19)
+  useEffect(()=>{
+    width < 800 ? setOffset(0): setOffset(0.15)
+  },[width])
+  
   return (
     <div className="staff-container" id="staff">
       <span className="staff-title accent-font creepy-font">
@@ -128,7 +133,7 @@ const Staff = () => {
         title="Twinkle"
         tag="@TwinkleToes#7587"
         titleColor={{ color: "#9fb5db" }}
-        desc="Hey I'm Twinkle (Twonkle,Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
+        desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />
     </div>
   );

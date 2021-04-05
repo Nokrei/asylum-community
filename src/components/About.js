@@ -150,6 +150,7 @@ const About = () => {
           <h1>We are Asylum 669 </h1>
           <span>
             <h1>Server Boost Level 3</h1>
+            <br/>
           </span>
           Like a phoenix we rise from the ashes!
           <br />

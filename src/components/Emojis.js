@@ -25,7 +25,7 @@ const Emojis = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
   const [emojiClass, setEmojiClass] = useState("emoji");
   useEffect(() => {
-    globalState.scrollPosition < 100
+    globalState.scrollPosition < 1000
       ? setEmojiClass("emoji-animated")
       : setEmojiClass("emoji");
   }, [globalState.scrollPosition]);

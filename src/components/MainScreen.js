@@ -11,7 +11,9 @@ import Home from "./Home";
 import About from "./About";
 import Staff from "./Staff";
 import Testimonials from "./Testimonials";
-import Emojis from './Emojis'
+import Emojis from './Emojis';
+import Join from './Join';
+
 const MainScreen = () => {
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
@@ -27,7 +29,7 @@ const MainScreen = () => {
   const handleScroll = debounce((e) => {
     setGlobalState({
       scrollPosition:
-        e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop ,
+        e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop  ,
     });
   
     const currentScrollPos = e.target.scrollTop;
@@ -64,6 +66,7 @@ const MainScreen = () => {
           <Staff />
           <Testimonials />
           <Emojis/>
+          <Join/>
         </animated.div>
       </div>
     </div>

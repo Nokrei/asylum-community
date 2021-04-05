@@ -22,8 +22,6 @@ body {
   margin: auto;
   z-index: 9999;
   background-color: rgba($color: #111012, $alpha: 0.9);
-  text-shadow: 0 0 1px #b2696e, 0 0 2px #b2696e, 0 0 3px #b2696e,
-    0 0 4px #b2696e,  0 0 2px #b2696e, 0 0 2px #b2696e, 
 }
 .top-nav__logo {
   height: 4rem;
@@ -31,13 +29,28 @@ body {
 .top-nav__item {
   align-self: center;
   transition-duration: 0.2s;
-}
-.top-nav__item:hover{
-  color: #b2696e;
-  text-shadow: 0 0 5px black, 0 0 7px #b2696e, 0 0 9px #b2696e,
-    0 0 10px #b2696e,  0 0 10px #b2696e, 0 0 40px #b2696e, 
-}
-.top-nav a {
+  text-shadow: 0 0 1px #b2696e, 0 0 2px #b2696e, 0 0 3px #b2696e,
+    0 0 4px #b2696e, 0 0 2px #b2696e, 0 0 2px #b2696e;
   text-decoration: none;
   color: inherit;
+}
+.top-nav__item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-nav__item:hover {
+  color: #b2696e;
+  text-shadow: 0 0 5px black, 0 0 7px #b2696e, 0 0 9px #b2696e, 0 0 10px #b2696e,
+    0 0 10px #b2696e, 0 0 40px #b2696e;
+}
+
+@media only screen and (max-width: 800px) {
+  .top-nav__item {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-shadow: 0 0 1px #b2696e, 0 0 3px #b2696e, 0 0 3px #b2696e,
+      0 0 3px #b2696e, 0 0 3px #b2696e, 0 0 3px #b2696e;
+  }
 }

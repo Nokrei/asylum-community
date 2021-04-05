@@ -57,3 +57,14 @@
 .testimonial-card__content {
   font-size: 1rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .testimonial-card {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem;
+  }
+  .testimonials__title {
+    font-size: 1.5rem;
+  }
+}

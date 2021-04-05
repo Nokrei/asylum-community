@@ -17,11 +17,13 @@ import ApproveEntry from "./ApproveEntry";
 import MainScreen from "./MainScreen";
 
 function App() {
+  
   const [globalState, setGlobalState] = useState({
     changeLaout: false,
-   
-    scrollPosition: 0
+    scrollPosition: 0,
   });
+ 
+
   return (
     <div className="App">
       <AppContext.Provider value={[globalState, setGlobalState]}>

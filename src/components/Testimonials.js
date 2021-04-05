@@ -15,9 +15,12 @@ const Testimonials = () => {
 
   if (width < 2000 && width > 1500) {
     numOfSlides = 3;
-  } else if (width < 1500) {
+  } else if (width < 1500 && width > 800) {
     numOfSlides = 2;
+  }else if (width < 800) {
+    numOfSlides = 1;
   }
+
 
   // Former option with useTransition
   // // array of testimonials

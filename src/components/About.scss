@@ -2,7 +2,6 @@
   width: 70%;
   margin: auto;
   text-align: center;
-  font-size: 1vw;
   height: 100vh;
   position: relative;
   padding-top: 20vh;
@@ -31,7 +30,7 @@
  
 }
 .about__slide--one span {
-  line-height: 3rem;
+  
 }
 .about__slide--two {
   width: 50%;
@@ -54,6 +53,11 @@
   color: #9fb5db;
   font-size: 2vw;
 }
+.about__slide--button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
 .circle__container {
   display: flex;
   width: 5vw;
@@ -73,4 +77,32 @@
   background-color: #9fb5db;
   margin: auto;
   cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .about{
+    width:90%
+  }
+  .about__title{
+    font-size: 1.5rem;
+  }
+  .about__container{
+    height:60vh;
+  }
+  .about__slide--button{
+    font-size: 2rem
+  }
+  .about__slide--two{
+    width:90%
+  }
+  .circle__container{
+    width:10rem
+  }
+  .button__circle{
+    width: 1rem;
+  height: 1rem;
+  }
+  .button__circle--active{
+    width: 1rem;
+  height: 1rem;
+  }
 }
