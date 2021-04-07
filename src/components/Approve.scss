@@ -82,13 +82,14 @@ html,body{
     opacity: 1;
   }
   100% {
-    transform: scale(500);
+    transform: scale(300);
     opacity: 1;
   }
 }
 .circle-two {
   @extend .circle;
   background-color: #9fb5db;
+  
 }
 .circle-two__animated {
   @extend .circle;
@@ -102,17 +103,17 @@ html,body{
     opacity: 1;
   }
   100% {
-    transform: scale(500);
+    transform: scale(300);
     opacity: 1;
   }
 }
 .circle-three {
   @extend .circle;
-  background-color: #2b272d;
+  background-color: #111012;
 }
 .circle-three__animated {
   @extend .circle;
-  background-color: #2b272d;
+  background-color: #111012;
   animation: circle-three 1000ms forwards;
   animation-delay: 1000ms;
 }
@@ -122,7 +123,7 @@ html,body{
     opacity: 1;
   }
   100% {
-    transform: scale(500);
+    transform: scale(300);
     opacity: 1;
   }
 }

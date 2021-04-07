@@ -22,7 +22,7 @@ const NavBar = (props) => {
 
   // Depending on viewport width, adjust state variables.
   useEffect(() => {
-    width > 800 ? setMobile(false) : setMobile(true);
+    width > 1025 ? setMobile(false) : setMobile(true);
   }, [width]);
 
   // Handle closing / opening side menu and hamburger menu style.

@@ -5,6 +5,7 @@
   height: 100vh;
   position: relative;
   padding-top: 20vh;
+  background-color: #111012;
 }
 .about__title {
   font-size: 2rem;
@@ -91,6 +92,38 @@
   .about__slide--button{
     font-size: 2rem
   }
+  
+  .about__slide--two{
+    width:90%
+  }
+  .circle__container{
+    width:10rem
+  }
+  .button__circle{
+    width: 1rem;
+  height: 1rem;
+  }
+  .button__circle--active{
+    width: 1rem;
+  height: 1rem;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1025px) {
+  .about{
+    width:90%
+  }
+  .about__title{
+    font-size: 1rem;
+  }
+  .about__container{
+    height:70vh;
+  }
+  .about__slide--button{
+    font-size: 2rem
+  }
+  .about__slide {
+    font-size: 0.6rem;
+   }
   .about__slide--two{
     width:90%
   }

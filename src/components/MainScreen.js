@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useInView } from "react-intersection-observer";
 import AppContext from "./AppContext";
 import { HashLink as Link } from "react-router-hash-link";
 import { useSpring, animated, config } from "react-spring";
@@ -15,6 +16,9 @@ import Emojis from './Emojis';
 import Join from './Join';
 
 const MainScreen = () => {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
 
@@ -54,7 +58,7 @@ const MainScreen = () => {
       opacity: 1,
     },
     config: {
-      duration: 500,
+      duration: 200,
     },
   });
 
@@ -64,7 +68,7 @@ const MainScreen = () => {
         <animated.div style={fadeIn}>
           <NavBar style={{top: visible ? '0' : '-200px', transition: 'top 0.6s'}}/>
           <Home style={{ opacity: ` ${1 - prevScrollPos / 500} ` }} />
-          <About />
+          <About ref={ref} />
           <Staff />
           <Testimonials />
           <Emojis/>

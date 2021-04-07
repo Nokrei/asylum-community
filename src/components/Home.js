@@ -32,7 +32,7 @@ const Home = (props) => {
   return (
     <div className="home-text__container">
       <div style={props.style} className=" white-font creepy-font home-text__big ">
-        Join The <br /> Madness
+      <span>Join The <br /> Madness</span>  
       </div>
     </div>
   );

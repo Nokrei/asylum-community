@@ -94,24 +94,26 @@
   .staff-card {
     display: grid;
     justify-items: center;
-    max-width: 90vw;
+    width: 90vmin;
     margin-bottom: 5rem;
+    border:1px solid white;
+    padding-bottom: 1rem;
   }
   .staff-card__image--container{
     position: relative;
   }
   .staff-card__image {
-    max-width: 90vw;
+    max-width: 50vmin;
   }
   .staff-card__image--animated {
-    max-width: 90vw;
+    max-width: 50vmin;
   }
   .staff-card__image2 {
-    max-width: 90vw;
+    max-width: 50vmin;
   }
 
   .staff-card__image2--animated {
-    max-width: 90vw;
+    max-width: 50vmin;
   }
   .staff-card__text {
     padding: 0;
@@ -124,17 +126,76 @@
     margin-bottom: 1rem;
   }
   .staff-card__text--tag {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
   }
   .staff-card__text--title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .staff-card__text--desc {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: justify;
     white-space: pre-wrap;
+    width:70vmin
+  }
+}
+// The same as above for now
+@media only screen and (min-width: 801px) and (max-width: 1025px) {
+  .staff-title{
+    font-size: 1rem;
+  }
+  .staff-container {
+    margin-top: 20vh;
+  }
+  .staff-card {
+    display: grid;
+    justify-items: center;
+    width: 90vmin;
+    margin-bottom: 5rem;
+    border:1px solid white;
+    padding-bottom: 1rem;
+  }
+  .staff-card__image--container{
+    position: relative;
+  }
+  .staff-card__image {
+    max-width: 50vmin;
+  }
+  .staff-card__image--animated {
+    max-width: 50vmin;
+  }
+  .staff-card__image2 {
+    max-width: 50vmin;
+  }
+
+  .staff-card__image2--animated {
+    max-width: 50vmin;
+  }
+  .staff-card__text {
+    padding: 0;
+    margin: 0;
+  }
+  .staff-card__text--top {
+    display: grid;
+    row-gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .staff-card__text--tag {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .staff-card__text--title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .staff-card__text--desc {
+    font-size: 1rem;
+    text-align: justify;
+    white-space: pre-wrap;
+    width:70vmin
   }
 }

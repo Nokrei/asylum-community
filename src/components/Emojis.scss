@@ -1,5 +1,5 @@
 .emojis {
-  height: 30vh;
+  
   width: 70%;
   margin: auto;
   text-align: center;
@@ -40,7 +40,7 @@
 }
 @media only screen and (max-width: 800px) {
   .emojis {
-    height: 30vh;
+    height:100vh;
     width: 70%;
     
   }
@@ -56,6 +56,27 @@
   }
   .emoji-animated {
     max-width: 10vw;
+   
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1025px) {
+  .emojis {
+    height:100vh;
+    width: 70%;
+    
+  }
+  .emojis__container {
+    
+    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
+    grid-auto-rows: 10vw;
+    
+  }
+  .emoji {
+    max-width: 5vw;
+    
+  }
+  .emoji-animated {
+    max-width: 5vw;
    
   }
 }
