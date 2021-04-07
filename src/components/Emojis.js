@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import AppContext from "./AppContext";
+import { useInView } from "react-intersection-observer";
+
 import "./App.scss";
 import "./Emojis.scss";
 import coinA from "../images/emojis/CoinA.png";
@@ -21,14 +22,17 @@ import unamusedQ from "../images/emojis/UnamusedQ.png";
 import whipping from "../images/emojis/Whipping.png";
 
 const Emojis = () => {
-  // Global state to catch scroll position
-  const [globalState, setGlobalState] = useContext(AppContext);
+  // Use the react intersection observer to determine if emojis are in the viewport.
+
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+  // Assign class accordingly (animated or not).
   const [emojiClass, setEmojiClass] = useState("emoji");
   useEffect(() => {
-    globalState.scrollPosition < 1000
-      ? setEmojiClass("emoji-animated")
-      : setEmojiClass("emoji");
-  }, [globalState.scrollPosition]);
+    inView ? setEmojiClass("emoji-animated") : setEmojiClass("emoji");
+  }, [inView]);
   const emojiArr = [
     coinA,
     egirl,
@@ -49,7 +53,7 @@ const Emojis = () => {
   ];
 
   return (
-    <div className="emojis">
+    <div ref={ref} className="emojis">
       <div className="emojis__container">
         {emojiArr.map((emoji) => {
           return (
@@ -61,7 +65,11 @@ const Emojis = () => {
           );
         })}
       </div>
-      <div className="emojis__title white-font">
+      <div
+        ref={ref}
+        className="emojis__title white-font"
+        style={{ transitionProperty: `opacity`, opacity: inView ? 1 : 0 }}
+      >
         Custom Emojis created by Rosa and SirTypos
       </div>
     </div>

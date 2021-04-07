@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import AppContext from "./AppContext";
-import { useSpring } from "react-spring";
-import useWindowDimensions from './useWindowDimensions'
+
 import "./App.scss";
 import "./Staff.scss";
 import StaffCard from "./StaffCard";
@@ -15,14 +13,10 @@ import eliza from "../images/eliza.png";
 import nefarius from "../images/nefarius.png";
 import twinkle from "../images/twinkle.png";
 const Staff = () => {
-  const {width} = useWindowDimensions()
-  // Get values for translate on scroll animation from global state (MainScreen)
-  const [globalState, setGlobalState] = useContext(AppContext);
-  const [offset, setOffset] = useState(0.19)
-  useEffect(()=>{
-    width < 800 ? setOffset(0): setOffset(0.15)
-  },[width])
-  
+  // left and right pass values to translateX in StaffCard
+  const left = "-100%";
+  const right = "100%";
+
   return (
     <div className="staff-container" id="staff">
       <span className="staff-title accent-font creepy-font">
@@ -31,9 +25,7 @@ const Staff = () => {
       <br />
       <br />
       <StaffCard
-        style={{
-          transform: `translateX(${globalState.scrollPosition * -offset}px)`,
-        }}
+        direction={left}
         img={eliza}
         class="staff-card__image"
         title="Eliza"
@@ -43,10 +35,8 @@ const Staff = () => {
         Gaming alone sucks, so don't do it alone silly, come on in!"
       />{" "}
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * offset}px)`,
-          flexDirection: "row-reverse",
-        }}
+        direction={right}
+        flex="row-reverse"
         img={nefarius}
         border={{ visibility: "hidden" }}
         class="staff-card__image"
@@ -60,9 +50,7 @@ const Staff = () => {
         so naturally a perfect fit for 2nd in charge."
       />
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * -offset}px)`,
-        }}
+        direction={left}
         img={grace2}
         img2={grace1}
         border={{ visibility: "hidden" }}
@@ -75,10 +63,8 @@ const Staff = () => {
          JOIN US. Subscribe to my OnlyChairs."
       />
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * offset}px)`,
-          flexDirection: "row-reverse",
-        }}
+        direction={right}
+        flex="row-reverse"
         img={nonToxic}
         border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
@@ -91,9 +77,7 @@ const Staff = () => {
         I will leave you with this wisdom: Before you ask why someones dislikes you, ask yourself why do you give a fuck?"
       />
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * -offset}px)`,
-        }}
+        direction={left}
         img={four1}
         img2={four2}
         border={{ borderColor: "#9fb5db" }}
@@ -108,10 +92,8 @@ const Staff = () => {
         "
       />
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * offset}px)`,
-          flexDirection: "row-reverse",
-        }}
+        direction={right}
+        flex="row-reverse"
         img={typos}
         border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
@@ -124,9 +106,7 @@ const Staff = () => {
         so come on in, meet new friends & get comfy!"
       />
       <StaffCard
-        style={{
-          transform: `translate(${globalState.scrollPosition * -offset}px)`,
-        }}
+        direction={left}
         img={twinkle}
         border={{ borderColor: "#9fb5db" }}
         class="staff-card__image"

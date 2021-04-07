@@ -6,6 +6,9 @@
   text-transform: uppercase;
   text-align: center;
 }
+.staff-animated{
+  opacity:0
+}
 .staff-card {
   padding-top: 1rem;
   display: flex;
@@ -13,6 +16,7 @@
   width: 60%;
   margin: auto;
   position: relative;
+  transition-duration: 1s;
 }
 .staff-card__text {
   margin-left: 1rem;

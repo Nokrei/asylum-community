@@ -40,7 +40,9 @@ const MainScreen = () => {
     setPrevScrollPos(currentScrollPos)
     
     setCheckscroll(e.target.scrollTop / globalState.scrollPosition);
-    console.log(globalState.scrollPosition);
+    console.log('global: ' + globalState.scrollPosition);
+    console.log('current: ' + currentScrollPos);
+    console.log('prev: ' + prevScrollPos);
   },1);
 
   // Spring animation for initial fade-in
@@ -61,7 +63,7 @@ const MainScreen = () => {
       <div>
         <animated.div style={fadeIn}>
           <NavBar style={{top: visible ? '0' : '-200px', transition: 'top 0.6s'}}/>
-          <Home style={{ opacity: ` ${1 - checkScroll * 7} ` }} />
+          <Home style={{ opacity: ` ${1 - prevScrollPos / 500} ` }} />
           <About />
           <Staff />
           <Testimonials />
