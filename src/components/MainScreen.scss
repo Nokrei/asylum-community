@@ -50,7 +50,10 @@ body {
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem 0;
-    text-shadow: 0 0 1px #b2696e, 0 0 3px #b2696e, 0 0 3px #b2696e,
-      0 0 3px #b2696e, 0 0 3px #b2696e, 0 0 3px #b2696e;
+    color:#b2696e;
+    text-shadow: none
+  }
+  .top-nav__item:hover{
+    text-shadow: none
   }
 }

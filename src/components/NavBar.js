@@ -61,6 +61,7 @@ const NavBar = (props) => {
         </div>
       ) : (
         <Menu
+          
           isOpen={toggleMenu}
           onOpen={toggleBurger}
           onClose={toggleBurger}
@@ -68,18 +69,18 @@ const NavBar = (props) => {
           burgerBarClassName={burgerBarClass}
           width={300}
         >
-          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item ">
             About Us
           </Link>
 
-          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item ">
             Staff
           </Link>
 
-          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item ">
             Testimonials
           </Link>
-          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item ">
             Join Us
           </Link>
         </Menu>
