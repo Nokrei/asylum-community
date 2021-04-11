@@ -40,7 +40,7 @@
 }
 @media only screen and (max-width: 800px) {
   .emojis {
-    height:100vh;
+    
     width: 70%;
     
   }
@@ -61,22 +61,22 @@
 }
 @media only screen and (min-width: 801px) and (max-width: 1025px) {
   .emojis {
-    height:100vh;
+    
     width: 70%;
     
   }
   .emojis__container {
     
-    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
-    grid-auto-rows: 10vw;
+    grid-template-columns: repeat(auto-fill, minmax(10vmin, 1fr));
+    grid-auto-rows: 10vmin;
     
   }
   .emoji {
-    max-width: 5vw;
+    max-width: 7vmin;
     
   }
   .emoji-animated {
-    max-width: 5vw;
+    max-width: 7vmin;
    
   }
 }
