@@ -12,73 +12,33 @@
   text-transform: uppercase;
 }
 .about__container{
-    position: relative;
-    height:50vh;
-    display: flex;
-    align-items: center;
+    
+  width: 100%;
+  height: 10rem;
+  margin: auto;
+  font-size: 1rem;
+  text-align: center;
+  cursor: grab;
+  padding-top: 2rem;
 }
 .about ul {
   list-style-position: inside;
 }
 .about__slide {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about__slide--one {
- 
-}
-.about__slide--one span {
-  
-}
-.about__slide--two {
-  width: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.button__container {
-  position: absolute;
-  bottom:0;
-  width: 100%;
+  width: 30rem;
+  height: 10rem;
+  padding: 1rem;
+  text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-.about__slide--button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  color: #9fb5db;
-  font-size: 2vw;
-}
-.about__slide--button:focus{
-  outline: none;
-  box-shadow: none;
+.about__slide:focus{
+  outline:none
 }
 
-.circle__container {
-  display: flex;
-  width: 5vw;
-}
-.button__circle {
-  width: 1vw;
-  height: 1vw;
-  border-radius: 100%;
-  background-color: #b2696e;
-  margin: auto;
-  cursor: pointer;
-}
-.button__circle--active {
-  width: 1vw;
-  height: 1vw;
-  border-radius: 100%;
-  background-color: #9fb5db;
-  margin: auto;
-  cursor: pointer;
-}
+
 @media only screen and (max-width: 700px) {
   .about{
     width:90%
@@ -89,24 +49,7 @@
   .about__container{
     height:90vh;
   }
-  .about__slide--button{
-    font-size: 2rem
-  }
-  
-  .about__slide--two{
-    width:90%
-  }
-  .circle__container{
-    width:10rem
-  }
-  .button__circle{
-    width: 1rem;
-  height: 1rem;
-  }
-  .button__circle--active{
-    width: 1rem;
-  height: 1rem;
-  }
+
 }
 @media only screen and (min-width: 701px) and (max-width: 1025px) {
   .about{
@@ -121,21 +64,6 @@
   .about__slide--button{
     font-size: 2rem
   }
-  .about__slide {
-    font-size: 0.6rem;
-   }
-  .about__slide--two{
-    width:90%
-  }
-  .circle__container{
-    width:10rem
-  }
-  .button__circle{
-    width: 1rem;
-  height: 1rem;
-  }
-  .button__circle--active{
-    width: 1rem;
-  height: 1rem;
-  }
+  
+ 
 }

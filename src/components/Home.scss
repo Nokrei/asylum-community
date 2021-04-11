@@ -9,8 +9,7 @@
 }
 .home-text__container {
   height: 100vh;
-  display: flex;
-  position: relative;
+ 
 }
 .home-text__big {
   width: 100%;
@@ -18,9 +17,8 @@
   text-align: center;
   font-size: 12rem;
   text-transform: uppercase;
-  top:20vh;
-  position: fixed;
-  z-index: -1;
+  margin-top:20vh;
+ 
 }
 .home-text__big span{
  
