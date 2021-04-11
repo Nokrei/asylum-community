@@ -56,4 +56,9 @@ body {
   .top-nav__item:hover{
     text-shadow: none
   }
+  .bm-menu-wrap {
+    position: fixed;
+    top:0px;
+    height: 100%;
+  }
 }
