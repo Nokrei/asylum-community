@@ -13,10 +13,11 @@ const StaffCard = (props) => {
   return (
     <div
       ref={ref}
-      className="staff-card"
+      className={props.cardClass}
       style={{
         transform: `translateX(${inView ? 0 : props.direction})`,
         flexDirection: props.flex,
+       
       }}
     >
       <div className="staff-card__image--container" style={props.grid}>
@@ -31,11 +32,18 @@ const StaffCard = (props) => {
           >
             {props.title}
           </div>
-          <div className="staff-card__text--tag" style={props.border}>
-            {props.tag}
+        </div>
+        <div className="staff-card__text--bottom">
+          <div className="staff-card__text--desc">{props.desc} </div>
+          <div className="staff-card__text--tags" style={props.tags}>
+            <div className="staff-card__text--role" style={props.border1}>
+              {props.role}
+            </div>
+            <div className="staff-card__text--tag" style={props.border2}>
+              {props.tag}
+            </div>
           </div>
         </div>
-        <div className="staff-card__text--desc">{props.desc} </div>
       </div>
     </div>
   );

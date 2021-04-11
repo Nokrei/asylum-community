@@ -6,23 +6,28 @@
   text-transform: uppercase;
   text-align: center;
 }
-.staff-animated{
-  opacity:0
+.staff-animated {
+  opacity: 0;
 }
 .staff-card {
-  padding-top: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 60%;
   margin: auto;
   position: relative;
   transition-duration: 1s;
 }
+.staff-card__blue{
+  @extend .staff-card;
+}
 .staff-card__text {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 1rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  padding: 0.5rem;
   height: auto;
+  display: grid;
 }
 .staff-card__text--title {
   font-size: 2rem;
@@ -36,10 +41,23 @@
   justify-content: space-between;
   align-items: center;
 }
+.staff-card__text--bottom {
+  display: grid;
+}
+.staff-card__text--tags {
+  display: flex;
+  justify-self: right;
+  align-self: baseline;
+  padding-top: 1%;
+}
 .staff-card__text--tag {
   border: 1px solid #b2696e;
   border-radius: 5px;
   padding: 0.2rem;
+}
+.staff-card__text--role {
+  @extend .staff-card__text--tag;
+  margin-right:1rem
 }
 
 .staff-card__image {
@@ -58,7 +76,7 @@
   max-width: 12vw;
   max-height: auto;
   left: 0;
-  
+
   animation: image2-animation 10s infinite;
 }
 @keyframes image1-animation {
@@ -85,7 +103,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .staff-title{
+  .staff-title {
     font-size: 1.5rem;
   }
   .staff-container {
@@ -94,40 +112,61 @@
   .staff-card {
     display: grid;
     justify-items: center;
-    width: 90vmin;
+    width: 80vmin;
     margin-bottom: 5rem;
-    border:1px solid white;
+    border: 1px solid #b2696e;
     padding-bottom: 1rem;
   }
-  .staff-card__image--container{
+  .staff-card__blue{
+    display: grid;
+    justify-items: center;
+    width: 80vmin;
+    margin-bottom: 5rem;
+    border: 1px solid #9fb5db;
+    padding-bottom: 1rem;
+   
+  }
+  .staff-card__image--container {
     position: relative;
   }
   .staff-card__image {
-    max-width: 50vmin;
+    max-width: 70vmin;
   }
   .staff-card__image--animated {
-    max-width: 50vmin;
+    max-width: 70vmin;
   }
   .staff-card__image2 {
-    max-width: 50vmin;
+    max-width: 70vmin;
   }
 
   .staff-card__image2--animated {
-    max-width: 50vmin;
+    max-width: 70vmin;
   }
   .staff-card__text {
     padding: 0;
     margin: 0;
   }
   .staff-card__text--top {
-    display: grid;
-    row-gap: 1rem;
     justify-content: center;
-    margin-bottom: 1rem;
+  }
+  .staff-card__text--bottom {
+    display: grid;
+    grid-template-areas: "a" "b";
+    row-gap: 1rem;
+    margin-top: 1rem;
+  }
+  .staff-card__text--tags {
+    justify-self: center !important;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
   .staff-card__text--tag {
     font-size: 1rem;
-    text-align: center;
+  }
+  .staff-card__text--role {
+  
+    margin-right:0
   }
   .staff-card__text--title {
     text-align: center;
@@ -135,15 +174,16 @@
   }
 
   .staff-card__text--desc {
+    grid-area: b;
     font-size: 1rem;
-    text-align: justify;
+    text-align: center;
     white-space: pre-wrap;
-    width:70vmin
+    width: 70vmin;
   }
 }
 // The same as above for now
 @media only screen and (min-width: 801px) and (max-width: 1025px) {
-  .staff-title{
+  .staff-title {
     font-size: 1rem;
   }
   .staff-container {
@@ -154,10 +194,10 @@
     justify-items: center;
     width: 90vmin;
     margin-bottom: 5rem;
-    border:1px solid white;
+    border: 1px solid white;
     padding-bottom: 1rem;
   }
-  .staff-card__image--container{
+  .staff-card__image--container {
     position: relative;
   }
   .staff-card__image {
@@ -196,6 +236,6 @@
     font-size: 1rem;
     text-align: justify;
     white-space: pre-wrap;
-    width:70vmin
+    width: 70vmin;
   }
 }

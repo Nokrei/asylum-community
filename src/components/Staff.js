@@ -25,22 +25,28 @@ const Staff = () => {
       <br />
       <br />
       <StaffCard
+        cardClass="staff-card"
         direction={left}
         img={eliza}
         class="staff-card__image"
         title="Eliza"
-        tag="@Eliza#0069"
+        role="@The Disease"
+        tag="Eliza#0069"
         desc="Ello Gamers, You have come to the right place! I am Eliza, 
         I am the owner of this madness and nothing happens here without my knowledge. 
         Gaming alone sucks, so don't do it alone silly, come on in!"
       />{" "}
       <StaffCard
+        cardClass="staff-card__blue"
         direction={right}
         flex="row-reverse"
         img={nefarius}
-        border={{ visibility: "hidden" }}
+        border1={{ borderColor: "#9fb5db" }}
+        border2={{ display: "none" }}
         class="staff-card__image"
         title="Nefarius"
+        role="@Warden"
+        tags={{ justifySelf: "left" }}
         titleColor={{ color: "#9fb5db" }}
         desc="It is I, Nefarius, the Avatar of the Asylum, maintainer of balance, 
         hoarder of booze, narcotics and camel milk, tech support, quencher of revolts, 
@@ -50,26 +56,32 @@ const Staff = () => {
         so naturally a perfect fit for 2nd in charge."
       />
       <StaffCard
+        cardClass="staff-card"
         direction={left}
         img={grace2}
         img2={grace1}
-        border={{ visibility: "hidden" }}
+        border2={{ display: "none" }}
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
         title="GraceTheGreat1"
+        role="@Psychiatrist"
         desc="Hi, I'm Grace! I like games. I'm an American who moved to Norway for love. 
         You can find me playing Overwatch, working out, or just chilling with the server.
          My main job on Asylum 669 is coordinating game nights along with Feral and Dave. 
          JOIN US. Subscribe to my OnlyChairs."
       />
       <StaffCard
+        cardClass="staff-card__blue"
         direction={right}
         flex="row-reverse"
         img={nonToxic}
-        border={{ borderColor: "#9fb5db" }}
+        border1={{ borderColor: "#9fb5db" }}
+        border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="NonToxic"
-        tag="@NonToxic#1809"
+        role="@Psychiatrist"
+        tag="NonToxic#1809"
+        tags={{ justifySelf: "left" }}
         titleColor={{ color: "#9fb5db" }}
         desc="A Smart person knows that a Tomato is a Fruit, but a wise person knows not to add into a fruit Salad. 
         I am known as NonToxic, I am Married for almost 15 years, I have 2 Children and I am a Gamer for Life.
@@ -77,14 +89,17 @@ const Staff = () => {
         I will leave you with this wisdom: Before you ask why someones dislikes you, ask yourself why do you give a fuck?"
       />
       <StaffCard
+        cardClass="staff-card__blue"
         direction={left}
         img={four1}
         img2={four2}
-        border={{ borderColor: "#9fb5db" }}
+        border1={{ borderColor: "#9fb5db" }}
+        border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
         title="FoursAreLife"
-        tag="@FoursAreLife#4444"
+        role="@Psychiatrist"
+        tag="FoursAreLife#4444"
         titleColor={{ color: "#9fb5db" }}
         desc="Hey, mane name is Fours or more commonly DAV / Dave, im an IT - Student from 
         Austria and spend way too much thime on the Internet and playing Destiny. My job is 
@@ -92,13 +107,17 @@ const Staff = () => {
         "
       />
       <StaffCard
+        cardClass="staff-card__blue"
         direction={right}
         flex="row-reverse"
         img={typos}
-        border={{ borderColor: "#9fb5db" }}
+        border1={{ borderColor: "#9fb5db" }}
+        border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="SirTypos"
-        tag="@SirTypos#7891"
+        role="@Psychiatrist"
+        tag="SirTypos#7891"
+        tags={{ justifySelf: "left" }}
         titleColor={{ color: "#9fb5db" }}
         desc="Hello there,
         I'm Sirtypos here with the mods to assist, I make emojis, some are questionable, 
@@ -106,12 +125,15 @@ const Staff = () => {
         so come on in, meet new friends & get comfy!"
       />
       <StaffCard
+        cardClass="staff-card__blue"
         direction={left}
         img={twinkle}
-        border={{ borderColor: "#9fb5db" }}
+        border1={{ borderColor: "#9fb5db" }}
+        border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="Twinkle"
-        tag="@TwinkleToes#7587"
+        role="@Psychiatrist"
+        tag="TwinkleToes#7587"
         titleColor={{ color: "#9fb5db" }}
         desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />
