@@ -23,7 +23,7 @@ iframe {
   display: flex;
   margin: 5rem auto;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   .join__title {
     font-size: 1.5rem;
   }
@@ -32,7 +32,7 @@ iframe {
     transform: scale(0.8);
   }
 }
-@media only screen and (min-width: 800px) and (max-width: 1025px) {
+@media only screen and (min-width: 701px) and (max-width: 1025px) {
   .join__title {
     font-size: 1rem;
   }
