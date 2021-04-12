@@ -4,7 +4,7 @@ import "./Join.scss";
 const Join = () => {
   return (
     <div className="join" id="join">
-      <div className="join__title accent-font creepy-font">
+      <div className="join__title blue-font creepy-font">
         <h1>Join us</h1>
       </div>
       <div className="join__content white-font">

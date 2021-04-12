@@ -11,12 +11,13 @@ html,body{
   overflow: hidden !important
 }
 .approve-container{
-  overflow: hidden
+  overflow: hidden;
+  height: 100vh;
 }
 .approve-text {
   @extend %font-settings;
   position: absolute;
-  top: 35%;
+  padding-top: 30vh;
   text-align: center;
   width: 100%;
   font-size: 6rem;
@@ -24,6 +25,7 @@ html,body{
   text-transform: uppercase;
   line-height: 3rem;
   height: 100vh;
+  
 }
 .approve-text__medium {
   font-size: 1.5rem;
@@ -55,13 +57,9 @@ html,body{
 }
 .eye {
   width: 8rem;
-  animation: eye-animation 5s infinite linear;
+  
 }
-@keyframes eye-animation {
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 .circle-initial {
   @extend .circle;
   opacity: 1;

@@ -1,27 +1,40 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { useSpring, animated, config } from "react-spring";
+import { useRect } from "react-use-rect";
+
 import AppContext from "./AppContext";
-import eye from "../images/eye.png";
+import eye from "../images/eye2.png";
 import "./Approve.scss";
 const ApproveEntry = () => {
+  
   const [globalState, setGlobalState] = useContext(AppContext);
+  // Using useRect, get access to {eye} dimensions and position.
+  const [ref, rect] = useRect();
 
-  // To transition to next screen after animation
+  // State variable to store mouse position.
+  const [mousePos, setMousePos] = useState({ posY: 0, posX: 0 });
+
+  // Update relevant state variable with current mouse position and calclate
+  // fitting values to be used in animation (RotateX and RotateY).
+  const handleMouseMove = (e) => {
+    setMousePos({
+      posY: -(e.clientY - rect.y - rect.height / 2) / 20,
+      posX: (e.clientX - rect.x - rect.width / 2) / 20,
+    });
+  };
+
+  
+  // To transition to next screen after animation.
   const [animationComplete, setAnimationComplete] = useState(false);
 
-  // Variables for image and text animations
+  // Variables for image and text animations.
   const [scale, setScale] = useState(1);
   const [textScale, setTextScale] = useState(6);
 
-   // Variables for image and text animations for mobile
-  const [mobileScale, setMobileScale] = useState(0);
-  const [touchData, setTouchData] = useState({
-    start: 0,
-    end: 0,
-  });
+  
 
-  // Function to trigger on mousewheel (not on scroll - overflow hidden)
+  // Function to trigger on mousewheel (not on scroll - overflow hidden).
   const onWheel = (e) => {
     if (e.deltaY > 0) {
       setScale(scale + 1);
@@ -36,29 +49,30 @@ const ApproveEntry = () => {
     }
   };
 
-  // Functions to trigger on mobile to simulate mousewheel
-  const touchStart = (e) => {
-    setScale(6)
-  };
-  const touchEnd = (e) => {
-    setTouchData({
-      ...touchData,
-      end: e.changedTouches[0].clientY,
-    });
-  };
-  useEffect(() => {
-    if (touchData.start !== 0 && touchData.end !== 0) {
-      if (touchData.start - touchData.end > 0) {
-        setScale(scale + 1);
-      setTextScale(textScale - 1);
-      } else if (touchData.start - touchData.end < 0) {
-        setScale(scale - 1);
-        setTextScale(textScale + 1);
-      }
-    }
-  }, [touchData]);
+  // State variable to be updated if user touches screen
+  const [touch, setTouch] = useState(false)
+ 
+  const handleTouch = ()=>{
+    setTouch(true)
+  }
 
-   console.log(mobileScale);
+  // After user touches screen, increase scale of {eye} by [0.1] every [1] ms
+  useEffect(() => {
+    const interval = setInterval(()=>{
+      if (touch){
+        setScale(scale + 0.1)
+      }
+      
+      console.log(scale);
+    },1)
+    return () => {
+      clearInterval(interval)
+    }
+  }, [touch, scale])
+
+  
+  
+  
   // console.log("scale: " + scale);
   // console.log("text: " + textScale);
 
@@ -108,9 +122,9 @@ const ApproveEntry = () => {
   return (
     <div
       className="approve-container"
+      onMouseMove={handleMouseMove}
       onWheel={onWheel}
-      onTouchStart={touchStart}
-      onTouchEnd={touchEnd}
+      onTouchStart={handleTouch}
     >
       {!animationComplete ? (
         <animated.div style={fadeIn} className="approve-text">
@@ -127,7 +141,16 @@ const ApproveEntry = () => {
               className="eye-container"
               style={{ transform: `scale(${scale > 0 && scale})` }}
             >
-              <img className="eye" src={eye} />
+              <img
+                ref={ref}
+                className="eye"
+                src={eye}
+                style={{
+                  transform: `perspective(100px) rotateY(${
+                    mousePos.posX 
+                  }deg) rotateX(${mousePos.posY}deg)`,
+                }}
+              />
             </div>
             <div className={state.one}></div>
             <div className={state.two}></div>
@@ -143,14 +166,14 @@ const ApproveEntry = () => {
             style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 3vw)` }}
             className="approve-text__medium accent-font"
           >
-            To the dark side
+            to the dark side
           </span>
           <br />
-          <br/>
+          <br />
           <p
             style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 4vw)` }}
           >
-            Scroll Down
+            SCROLL DOWN
           </p>
         </animated.div>
       ) : (

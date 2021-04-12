@@ -19,7 +19,7 @@ const Staff = () => {
 
   return (
     <div className="staff-container" id="staff">
-      <span className="staff-title accent-font creepy-font">
+      <span className="staff-title blue-font creepy-font">
         <h1>Staff</h1>
       </span>
       <br />

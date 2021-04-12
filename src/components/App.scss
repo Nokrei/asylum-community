@@ -24,6 +24,18 @@
   font-family: "RaslaniHorrorz";
   src: local("RaslaniHorrorz"), url(../fonts/RaslaniHorrorz.ttf) format("opentype");
 }
+@font-face {
+  font-family: "CrimesTimesSix";
+  src: local("CrimesTimesSix"), url(../fonts/CrimesTimesSix.ttf) format("truetype");
+}
+@font-face {
+  font-family: "feedmyfrankenstein";
+  src: local("feedmyfrankenstein"), url(../fonts/feedmyfrankenstein.ttf) format("truetype");
+}
+@font-face {
+  font-family: "WhippedScream";
+  src: local("WhippedScream"), url(../fonts/WhippedScream.ttf) format("truetype");
+}
 // === Settings =====
 %font-settings {
   font-family: "Gilroy ExtraBold", system-ui, sans-serif;
@@ -53,4 +65,7 @@
   //font-family: "RavenSong";
   //font-family: "Moist";
   //font-family: "RaslaniHorrorz";
+  //font-family: "CrimesTimesSix";
+  // font-family: "feedmyfrankenstein";
+  // font-family: "WhippedScream";
 }

@@ -43,11 +43,11 @@ const NavBar = (props) => {
   return (
     <div>
       {!mobile ? (
-        <div style={props.style} className="top-nav accent-font">
+        <div style={props.style} className="top-nav blue-font creepy-font">
           <span className="top-nav__item">
             <Link to="/main#about">About Us</Link>
           </span>
-          <span className="top-nav__item">
+          <span className="top-nav__item--blue">
             <Link to="/main#staff">Staff</Link>
           </span>
           <img className="top-nav__logo" src={AsylumLogo} />
@@ -55,7 +55,7 @@ const NavBar = (props) => {
             <Link to="/main#testimonials">Testimonials</Link>
           </span>
 
-          <span className="top-nav__item">
+          <span className="top-nav__item--blue">
             <Link to="/main#join">Join Us</Link>
           </span>
         </div>
@@ -69,18 +69,18 @@ const NavBar = (props) => {
           burgerBarClassName={burgerBarClass}
           width={300}
         >
-          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
             About Us
           </Link>
 
-          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
             Staff
           </Link>
 
-          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
             Testimonials
           </Link>
-          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item accent-font">
+          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
             Join Us
           </Link>
         </Menu>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DelayLink from "react-delay-link";
 import { useSpring, animated, config } from "react-spring";
+import './App.scss'
 import "./AgeScreen.scss";
 
 const AgeScreen = () => {
@@ -80,14 +81,14 @@ const AgeScreen = () => {
           </DelayLink>
           <DelayLink to="denied" delay={700} replace={false}>
             <div
-              className="age-text__answer__item age-text__answer__deny"
+              className="age-text__answer__item2 age-text__answer__deny "
               onClick={handleConfirmClick}
             >
               NO
-              <span class="Mask">
+              <span className="Mask2">
                 <span>NO</span>
               </span>
-              <span class="Mask">
+              <span className="Mask2">
                 <span>NO</span>
               </span>
             </div>
