@@ -10,5 +10,14 @@
     background-color: #b2696e;
     cursor: pointer;
     transform: scale(0);
-    color:#e5e5e5
+    color:#e5e5e5;
+    
 }
+.to-top:hover{
+    filter:drop-shadow(0 0 0.7rem #b2696e)
+}
+@media only screen and (max-width: 1025px) {
+    .to-top:hover{
+        filter:none
+    }
+  }
