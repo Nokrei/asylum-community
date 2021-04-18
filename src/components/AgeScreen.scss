@@ -36,13 +36,13 @@ html,body{
 
 .age-text__answer {
   line-height: 2;
+  position: relative;
   text-transform: uppercase;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
   font-size: 5rem;
 }
 

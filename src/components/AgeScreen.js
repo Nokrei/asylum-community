@@ -25,17 +25,17 @@ const AgeScreen = () => {
     },
     reset: fade.reset,
     reverse: fade.reverse,
-    delay: 100,
+    delay: 200,
   });
 
   const fadeDown = useSpring({
     from: {
-      marginTop: 200,
+     bottom:-500,
       opacity: 0,
       visibility: "hidden",
     },
     to: {
-      marginTop: 0,
+      bottom:0,
       opacity: 1,
       visibility: "visible",
     },
@@ -57,7 +57,7 @@ const AgeScreen = () => {
   return (
     <div className="age-screen">
       <div className="age-text">
-        <animated.div style={fadeFromUp} className="age-text__question">
+        <animated.div style={fadeFromUp}  className="age-text__question white-font">
           ARE YOU 18 YEARS
           <br />
           OR OLDER
