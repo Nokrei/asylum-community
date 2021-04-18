@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "infinite-react-carousel";
 import "./App.scss";
 import "./About.scss";
 
 const About = () => {
-  const [cursorStyle, setCursorStyle] = useState("inherit");
-
-  const handleMouseDown = () => {
-    setCursorStyle("grabbing");
-  };
-  const handleMouseUp = () => {
-    setCursorStyle("inherit");
-  };
 
   return (
     <div className="about white-font" id="about">

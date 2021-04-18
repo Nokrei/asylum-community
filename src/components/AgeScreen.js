@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import DelayLink from "react-delay-link";
 import { useSpring, animated, config } from "react-spring";
 import './App.scss'
@@ -26,12 +25,12 @@ const AgeScreen = () => {
     },
     reset: fade.reset,
     reverse: fade.reverse,
-    delay: 200,
+    delay: 100,
   });
 
   const fadeDown = useSpring({
     from: {
-      marginTop: 300,
+      marginTop: 200,
       opacity: 0,
       visibility: "hidden",
     },
@@ -45,7 +44,7 @@ const AgeScreen = () => {
     },
     reset: fade.reset,
     reverse: fade.reverse,
-    delay: 100,
+    delay: 200,
   });
 
   const handleConfirmClick = () => {
@@ -71,10 +70,10 @@ const AgeScreen = () => {
               onClick={handleConfirmClick}
             >
               YES
-              <span class="Mask">
+              <span className="Mask">
                 <span>YES</span>
               </span>
-              <span class="Mask">
+              <span className="Mask">
                 <span>YES</span>
               </span>
             </div>

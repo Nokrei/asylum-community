@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, useTransition, animated, config } from "react-spring";
+import React from "react";
 import Slider from "infinite-react-carousel";
 import useWindowDimensions from "./useWindowDimensions";
 import "./App.scss";

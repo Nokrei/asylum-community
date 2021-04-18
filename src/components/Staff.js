@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
-
+import React from "react";
 import "./App.scss";
 import "./Staff.scss";
 import StaffCard from "./StaffCard";

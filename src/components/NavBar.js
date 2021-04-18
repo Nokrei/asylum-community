@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { slide as Menu } from "react-burger-menu";
 import useWindowDimensions from "./useWindowDimensions";
-import AppContext from "./AppContext";
 import AsylumLogo from "../images/Asylum_Neon.png";
 import "./App.scss";
 import "./MainScreen.scss";

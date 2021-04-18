@@ -2,12 +2,10 @@ import React, { useState, useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { useSpring, animated, config } from "react-spring";
 import { useRect } from "react-use-rect";
-
 import AppContext from "./AppContext";
 import eye from "../images/eye2.png";
 import "./Approve.scss";
 const ApproveEntry = () => {
-  
   const [globalState, setGlobalState] = useContext(AppContext);
   // Using useRect, get access to {eye} dimensions and position.
   const [ref, rect] = useRect();
@@ -24,15 +22,12 @@ const ApproveEntry = () => {
     });
   };
 
-  
   // To transition to next screen after animation.
   const [animationComplete, setAnimationComplete] = useState(false);
 
   // Variables for image and text animations.
   const [scale, setScale] = useState(1);
   const [textScale, setTextScale] = useState(6);
-
-  
 
   // Function to trigger on mousewheel (not on scroll - overflow hidden).
   const onWheel = (e) => {
@@ -49,34 +44,16 @@ const ApproveEntry = () => {
     }
   };
 
-  // State variable to be updated if user touches screen
-  const [touch, setTouch] = useState(false)
- 
-  const handleTouch = ()=>{
-    setTouch(true)
-  }
+  // Start circle animation after user touches screen.
+  const handleTouch = () => {
+    setState({
+      one: "circle-one__animated",
+      two: "circle-two__animated",
+      three: "circle-three__animated",
+    });
+  };
 
-  // After user touches screen, increase scale of {eye} by [0.1] every [1] ms
-  useEffect(() => {
-    const interval = setInterval(()=>{
-      if (touch){
-        setScale(scale + 0.1)
-      }
-      
-      console.log(scale);
-    },1)
-    return () => {
-      clearInterval(interval)
-    }
-  }, [touch, scale])
-
-  
-  
-  
-  // console.log("scale: " + scale);
-  // console.log("text: " + textScale);
-
-  // React spring animation for initial fade in
+  // React spring animation for initial fade in.
   const fadeIn = useSpring({
     from: {
       opacity: 0,
@@ -89,14 +66,14 @@ const ApproveEntry = () => {
     },
   });
 
-  // Variables that contain class names for circle elements
+  // Variables that contain class names for circle elements.
   const [state, setState] = useState({
     one: "circle-one",
     two: "circle-two",
     three: "circle-three",
   });
 
-  // Assign animated classes to circle elements when the eye reaches desired size
+  // Assign animated classes to circle elements when the eye reaches desired size.
   useEffect(() => {
     if (scale > 5) {
       setState({
@@ -113,7 +90,7 @@ const ApproveEntry = () => {
     });
   };
 
-  // Execute redirect
+  // Execute redirect.
   const handleAnimationEnd = () => {
     setAnimationComplete(true);
   };
@@ -146,9 +123,7 @@ const ApproveEntry = () => {
                 className="eye"
                 src={eye}
                 style={{
-                  transform: `perspective(100px) rotateY(${
-                    mousePos.posX 
-                  }deg) rotateX(${mousePos.posY}deg)`,
+                  transform: `perspective(100px) rotateY(${mousePos.posX}deg) rotateX(${mousePos.posY}deg)`,
                 }}
               />
             </div>

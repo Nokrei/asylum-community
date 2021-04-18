@@ -9,7 +9,8 @@
 }
 .home-text__container {
   height: 100vh;
- 
+  display: grid;
+  place-content: center;
 }
 .home-text__big {
   width: 100%;
@@ -17,7 +18,7 @@
   text-align: center;
   font-size: 12rem;
   text-transform: uppercase;
-  margin-top:20vh;
+
  
 }
 .home-text__big span{
@@ -26,14 +27,14 @@
 
 @media only screen and (max-width: 700px) {
   .home-text__big {
-    margin-top:40vh;
+    
     width: 100%;
     font-size: 3.5rem;
   }
 }
 @media only screen and (min-width: 701px) and (max-width: 1025px) {
   .home-text__big {
-    margin-top:30vh;
+   
     width: 100%;
     font-size: 3.5rem;
   }

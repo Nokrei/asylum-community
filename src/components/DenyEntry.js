@@ -1,5 +1,6 @@
 import React from "react";
 import { useSpring, animated, config } from "react-spring";
+import './App.scss'
 import "./Deny.scss";
 const DenyEntry = () => {
   const fadeIn = useSpring({

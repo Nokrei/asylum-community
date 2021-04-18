@@ -6,29 +6,12 @@ $split-thickness: 4px;
 $split-color: #B2696E;
 $split-color2: #9fb5db;
 
-// === Settings =====
-%font-settings {
-  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
-}
+
 html,body{
   overflow:visible 
 }
 .age-screen {
   height: 100vh;
-  @extend %font-settings;
-  overflow:visible
-}
-.background-vid {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .top-text {
@@ -40,7 +23,6 @@ html,body{
   font-weight: bold;
 }
 .age-text {
-  
   position: absolute;
   top: 35%;
   text-align: center;
@@ -49,7 +31,6 @@ html,body{
   font-weight: bold;
 }
 .age-text__question {
-  
   color:rgb(226, 226, 226)
 }
 
@@ -143,7 +124,7 @@ html,body{
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .age-text {
     top: 40%;
     font-size: 3rem;
@@ -160,5 +141,17 @@ html,body{
 @media only screen and (max-width: 310px) {
   .age-text__answer {
     font-size: 2rem;
+  }
+
+}
+@media only screen and (min-width: 701px) and (max-width: 1025px) {
+  .age-text {
+    top: 40%;
+    font-size: 3rem;
+  }
+  .age-text__answer {
+    line-height: 1.2;
+    margin-top: 1rem;
+    font-size: 3rem;
   }
 }

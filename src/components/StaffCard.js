@@ -1,6 +1,5 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-
 import "./App.scss";
 import "./Staff.scss";
 const StaffCard = (props) => {

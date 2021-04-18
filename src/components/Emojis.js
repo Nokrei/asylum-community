@@ -59,6 +59,7 @@ const Emojis = () => {
           return (
             <img
               style={{ animationDelay: `${emojiArr.indexOf(emoji) / 20}s` }}
+              key={emoji}
               className={emojiClass}
               src={emoji}
             />
