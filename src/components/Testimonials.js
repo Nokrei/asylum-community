@@ -80,6 +80,10 @@ const Testimonials = () => {
       title: "Myrp",
       content: `"Asylum is super welcoming and the owner is the greatest person you'll ever meet. This place is super open minded and welcoming! Plus you get some whalecum when you join... ;)"`,
     },
+    {
+      title: "Bloom",
+      content: `"Hello, it's your fellow hot e-girl here. this community is genuinely the best you can join, bunch of beautiful and talented, friendly people and the admins are AMAZING. Join if you want to see some gorgeous people xo"`,
+    },
   ];
 
   return (

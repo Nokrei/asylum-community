@@ -27,7 +27,7 @@ const LayoutRoute = (props) => {
       <div className="top-text">
         <img className="top-logo" alt='logo' src={AsylumLogo} />
       </div>
-      <CookieConsent>
+      <CookieConsent >
             This website uses cookies to enhance the user experience.
           </CookieConsent>
       <Route

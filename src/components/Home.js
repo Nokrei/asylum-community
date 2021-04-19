@@ -8,9 +8,7 @@ const Home = (props) => {
         style={props.style}
         className="creepy-font home-text__big"
       >
-        <span>
           Join The <br/> Madness
-        </span>
       </div>
     </div>
   );

@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family:"NothingYouCouldDo" ;
+  src: url('../fonts/NothingYouCouldDo-Regular.ttf') format('truetype');
+}
 // === Settings =====
 %font-settings {
   font-family: "Gilroy ExtraBold", system-ui, sans-serif;
@@ -28,5 +31,5 @@
   color: #9fb5db;
 }
 .creepy-font {
-  font-family: "Nothing You Could Do", cursive ;
+  font-family: "NothingYouCouldDo" ;
 }

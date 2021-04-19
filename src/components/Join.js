@@ -12,8 +12,8 @@ const Join = () => {
         <a
           href="https://discord.gg/asylum669"
           target="blank"
-          rel=">noreferrer noopener"
-        >
+          rel="noreferrer noopener"
+        ><br/>
           {" "}
           https://discord.gg/asylum669{" "}
         </a>
