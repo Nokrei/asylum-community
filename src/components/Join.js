@@ -19,6 +19,7 @@ const Join = () => {
         </a>
       </div>
       <iframe
+        title='Discord widget'
         src="https://discord.com/widget?id=578264670805426245&theme=dark"
         width="350"
         height="500"

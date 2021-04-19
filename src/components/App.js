@@ -12,6 +12,7 @@ function App() {
   const [globalState, setGlobalState] = useState({
     changeLaout: false,
     scrollPosition: 0,
+    isAdult: false
   });
 
   return (

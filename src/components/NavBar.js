@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { slide as Menu } from "react-burger-menu";
-import useWindowDimensions from "./useWindowDimensions";
+import useWindowDimensions from "../utils/useWindowDimensions";
 import AsylumLogo from "../images/Asylum_Neon.png";
 import "./App.scss";
 import "./MainScreen.scss";
@@ -26,7 +26,7 @@ const NavBar = (props) => {
 
   // Handle closing / opening side menu and hamburger menu style.
   const toggleBurger = (e) => {
-    if (burgerBarClass == "bm-burger-bars") {
+    if (burgerBarClass === "bm-burger-bars") {
       setBurgerBarClass("bm-burger-cross");
       setToggleMenu(true);
     } else {
@@ -49,7 +49,7 @@ const NavBar = (props) => {
           <span className="top-nav__item--blue">
             <Link to="/main#staff">Staff</Link>
           </span>
-          <img className="top-nav__logo" src={AsylumLogo} />
+          <img className="top-nav__logo" alt='logo' src={AsylumLogo} />
           <span className="top-nav__item">
             <Link to="/main#testimonials">Testimonials</Link>
           </span>

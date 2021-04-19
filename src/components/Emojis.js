@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
 import "./App.scss";
 import "./Emojis.scss";
 import coinA from "../images/emojis/CoinA.png";
@@ -12,7 +11,6 @@ import horny from "../images/emojis/Horny.png";
 import idiot from "../images/emojis/Idiot.png";
 import insanityBooster from "../images/emojis/Insanity Booster.png";
 import noodzPing from "../images/emojis/NoodzPing.png";
-import owo from "../images/emojis/OwO.png";
 import queen from "../images/emojis/Queen.png";
 import simp from "../images/emojis/Simp.png";
 import smol from "../images/emojis/SMOL.png";
@@ -62,6 +60,7 @@ const Emojis = () => {
               key={emoji}
               className={emojiClass}
               src={emoji}
+              alt={emoji}
             />
           );
         })}

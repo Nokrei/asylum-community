@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "infinite-react-carousel";
-import useWindowDimensions from "./useWindowDimensions";
+import useWindowDimensions from "../utils/useWindowDimensions";
 import "./App.scss";
 import "./Testimonials.scss";
 import TestimonialCard from "./TestimonialCard";

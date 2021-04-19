@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useInView } from "react-intersection-observer";
+import React, { useState,  useContext } from "react";
 import AppContext from "./AppContext";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { debounce } from "../utils/helpers";
 import "./App.scss";
 import "./MainScreen.scss";
@@ -15,14 +14,9 @@ import Emojis from "./Emojis";
 import Join from "./Join";
 
 const MainScreen = () => {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
+ 
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
-
-  // State variable to get values for opacity animation
-  const [checkScroll, setCheckscroll] = useState(0);
 
   // State variables to get values for NavBar animation
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -40,8 +34,6 @@ const MainScreen = () => {
       prevScrollPos > currentScrollPos + 10 || currentScrollPos < prevScrollPos
     );
     setPrevScrollPos(currentScrollPos);
-
-    setCheckscroll(e.target.scrollTop / globalState.scrollPosition);
   }, 1);
 
   // Spring animation for initial fade-in

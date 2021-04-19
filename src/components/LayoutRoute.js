@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import AsylumLogo from "../images/Asylum_Neon.png";
-import useWindowDimensions from "./useWindowDimensions";
+import useWindowDimensions from "../utils/useWindowDimensions";
 import "./Layout.scss";
 const LayoutRoute = (props) => {
   // Get vievport width.
@@ -24,7 +24,7 @@ const LayoutRoute = (props) => {
         />
       </video>
       <div className="top-text">
-        <img className="top-logo" src={AsylumLogo} />
+        <img className="top-logo" alt='logo' src={AsylumLogo} />
       </div>
       <Route
         path={props.path}

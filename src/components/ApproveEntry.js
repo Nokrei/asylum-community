@@ -1,12 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { useRect } from "react-use-rect";
-import AppContext from "./AppContext";
+import useStateWithSessionStorage from "../utils/useStateWithSessionStorage";
 import eye from "../images/eye2.png";
 import "./Approve.scss";
 const ApproveEntry = () => {
-  const [globalState, setGlobalState] = useContext(AppContext);
+  // Get access to session storage via a custom hook.
+  const [value, setValue] = useStateWithSessionStorage("myValueInLocalStorage");
+
   // Using useRect, get access to {eye} dimensions and position.
   const [ref, rect] = useRect();
 
@@ -84,15 +86,12 @@ const ApproveEntry = () => {
     }
   }, [scale]);
 
-  const handleClick = () => {
-    setGlobalState({
-      changeLayout: true,
-    });
-  };
-
-  // Execute redirect.
+  // Execute redirect, set value in session storage to true - used for conditional rendering of 
+  // AgeScreen (if !value) and MainScreen (if value).
   const handleAnimationEnd = () => {
     setAnimationComplete(true);
+    setValue(true);
+    
   };
   animationComplete && <Redirect to="/main" />;
 
@@ -122,6 +121,7 @@ const ApproveEntry = () => {
                 ref={ref}
                 className="eye"
                 src={eye}
+                alt='eye'
                 style={{
                   transform: `perspective(100px) rotateY(${mousePos.posX}deg) rotateX(${mousePos.posY}deg)`,
                 }}

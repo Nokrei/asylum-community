@@ -27,6 +27,7 @@ const Staff = () => {
         cardClass="staff-card"
         direction={left}
         img={eliza}
+        alt='Eliza'
         class="staff-card__image"
         title="Eliza"
         role="@The Disease"
@@ -40,6 +41,7 @@ const Staff = () => {
         direction={right}
         flex="row-reverse"
         img={nefarius}
+        alt='Nefarius'
         border1={{ borderColor: "#9fb5db" }}
         border2={{ display: "none" }}
         class="staff-card__image"
@@ -59,6 +61,8 @@ const Staff = () => {
         direction={left}
         img={grace2}
         img2={grace1}
+        alt="Grace2"
+        alt2="Grace"
         border2={{ display: "none" }}
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
@@ -74,6 +78,7 @@ const Staff = () => {
         direction={right}
         flex="row-reverse"
         img={nonToxic}
+        alt="NonToxic"
         border1={{ borderColor: "#9fb5db" }}
         border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
@@ -92,6 +97,8 @@ const Staff = () => {
         direction={left}
         img={four1}
         img2={four2}
+        alt="FoursAreLife"
+        alt2="FoursAreLife2"
         border1={{ borderColor: "#9fb5db" }}
         border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image--animated"
@@ -110,6 +117,7 @@ const Staff = () => {
         direction={right}
         flex="row-reverse"
         img={typos}
+        alt="SirTypos"
         border1={{ borderColor: "#9fb5db" }}
         border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
@@ -131,6 +139,7 @@ const Staff = () => {
         border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="Twinkle"
+        alt="Twinkle"
         role="@Psychiatrist"
         tag="TwinkleToes#7587"
         titleColor={{ color: "#9fb5db" }}
