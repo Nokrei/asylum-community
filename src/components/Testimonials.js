@@ -76,6 +76,10 @@ const Testimonials = () => {
       title: "Melon",
       content: `"Asylum 669 is such a strange a wonderful place full of brilliant people from all over the world who like to laugh together."`,
     },
+    {
+      title: "Myrp",
+      content: `"Asylum is super welcoming and the owner is the greatest person you'll ever meet. This place is super open minded and welcoming! Plus you get some whalecum when you join... ;)"`,
+    },
   ];
 
   return (

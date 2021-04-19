@@ -7,10 +7,11 @@
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
 }
-html,body{
-  overflow: hidden !important
+html,
+body {
+  overflow: hidden !important;
 }
-.approve-container{
+.approve-container {
   overflow: hidden;
   height: 100vh;
 }
@@ -25,7 +26,6 @@ html,body{
   text-transform: uppercase;
   line-height: 3rem;
   height: 100vh;
-  
 }
 .approve-text__medium {
   font-size: 1.5rem;
@@ -33,10 +33,9 @@ html,body{
 }
 .circle-container {
   width: 100%;
- 
+
   position: relative;
   top: 10px;
-  
 }
 .circle {
   left: 0;
@@ -57,7 +56,6 @@ html,body{
 }
 .eye {
   width: 8rem;
-  
 }
 
 .circle-initial {
@@ -87,7 +85,6 @@ html,body{
 .circle-two {
   @extend .circle;
   background-color: #9fb5db;
-  
 }
 .circle-two__animated {
   @extend .circle;

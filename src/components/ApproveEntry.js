@@ -86,12 +86,11 @@ const ApproveEntry = () => {
     }
   }, [scale]);
 
-  // Execute redirect, set value in session storage to true - used for conditional rendering of 
+  // Execute redirect, set value in session storage to true - used for conditional rendering of
   // AgeScreen (if !value) and MainScreen (if value).
   const handleAnimationEnd = () => {
     setAnimationComplete(true);
     setValue(true);
-    
   };
   animationComplete && <Redirect to="/main" />;
 
@@ -121,7 +120,7 @@ const ApproveEntry = () => {
                 ref={ref}
                 className="eye"
                 src={eye}
-                alt='eye'
+                alt="eye"
                 style={{
                   transform: `perspective(100px) rotateY(${mousePos.posX}deg) rotateX(${mousePos.posY}deg)`,
                 }}
