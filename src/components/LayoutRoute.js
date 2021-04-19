@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
+import CookieConsent from "react-cookie-consent";
 import AsylumLogo from "../images/Asylum_Neon.png";
 import useWindowDimensions from "../utils/useWindowDimensions";
 import "./Layout.scss";
@@ -26,6 +27,9 @@ const LayoutRoute = (props) => {
       <div className="top-text">
         <img className="top-logo" alt='logo' src={AsylumLogo} />
       </div>
+      <CookieConsent>
+            This website uses cookies to enhance the user experience.
+          </CookieConsent>
       <Route
         path={props.path}
         exact={props.exact}

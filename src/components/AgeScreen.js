@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import DelayLink from "react-delay-link";
 import { useSpring, animated } from "react-spring";
-import CookieConsent from "react-cookie-consent";
+
 import useStateWithSessionStorage from "../utils/useStateWithSessionStorage";
 import "./App.scss";
 import "./AgeScreen.scss";
@@ -121,9 +121,7 @@ const AgeScreen = () => {
               Videezy
             </a>
           </p>
-          <CookieConsent  overlay>
-            This website uses cookies to enhance the user experience.
-          </CookieConsent>
+         
         </div>
       ) : (
         <Redirect to="/main" />

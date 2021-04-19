@@ -1,6 +1,7 @@
 import React, { useState,  useContext } from "react";
 import AppContext from "./AppContext";
 import { useSpring, animated } from "react-spring";
+import CookieConsent from "react-cookie-consent";
 import { debounce } from "../utils/helpers";
 import "./App.scss";
 import "./MainScreen.scss";
@@ -65,6 +66,9 @@ const MainScreen = () => {
           <ToTop style={{transform: visible ? `scale(0)` : 'scale(1)', transition:'all 0.2s'}}/>
         </animated.div>
       </div>
+      <CookieConsent>
+            This website uses cookies to enhance the user experience.
+          </CookieConsent>
     </div>
   );
 };
