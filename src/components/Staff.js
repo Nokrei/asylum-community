@@ -107,9 +107,9 @@ const Staff = () => {
         role="@Psychiatrist"
         tag="FoursAreLife#4444"
         titleColor={{ color: "#9fb5db" }}
-        desc="Hey, mane name is Fours or more commonly DAV / Dave, im an IT - Student from 
-        Austria and spend way too much thime on the Internet and playing Destiny. My job is 
-        mostly recruiting and hosting Server-events.
+        desc="Hey, mane name is Fours or more commonly DAV / Dave, I'm an IT student from 
+        Austria and spend way too much time on the Internet and playing Destiny. My job is 
+        mostly recruiting and hosting server events.
         "
       />
       <StaffCard
