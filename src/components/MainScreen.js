@@ -45,7 +45,7 @@ const MainScreen = () => {
       opacity: 1,
     },
     config: {
-      duration: 200,
+      duration: 1000,
     },
   });
 

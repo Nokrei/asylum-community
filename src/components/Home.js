@@ -9,7 +9,7 @@ const Home = (props) => {
         className="creepy-font home-text__big"
       >
         <span>
-          Join The <br /> Madness
+          Join The <br/> Madness
         </span>
       </div>
     </div>
