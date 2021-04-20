@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family:"NothingYouCouldDo" ;
-  font-display: swap;
+  font-display: fallback;
   src: local('NothingYouCouldDo-Regular'), url('../fonts/NothingYouCouldDo-Regular.ttf') format('truetype');
 }
 // === Settings =====
