@@ -13,9 +13,9 @@ import Staff from "./Staff";
 import Testimonials from "./Testimonials";
 import Emojis from "./Emojis";
 import Join from "./Join";
-
+import (/*webpackPreload:true '*/ '../fonts/NothingYouCouldDo-Regular.ttf');
 const MainScreen = () => {
- 
+  
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
 

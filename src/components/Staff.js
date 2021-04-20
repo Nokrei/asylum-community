@@ -107,8 +107,8 @@ const Staff = () => {
         role="@Psychiatrist"
         tag="FoursAreLife#4444"
         titleColor={{ color: "#9fb5db" }}
-        desc="Hey, mane name is Fours or more commonly DAV / Dave, I'm an IT student from 
-        Austria and spend way too much time on the Internet and playing Destiny. My job is 
+        desc="Hey, my name is Fours, or more commonly DAV / Dave. I'm an IT student from 
+        Austria and spend way too much time on the internet, and playing Destiny. My job is 
         mostly recruiting and hosting server events.
         "
       />
@@ -143,7 +143,7 @@ const Staff = () => {
         role="@Psychiatrist"
         tag="TwinkleToes#7587"
         titleColor={{ color: "#9fb5db" }}
-        desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19. I've not been in the community long. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
+        desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19 and make sure everyone has a good time. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />
     </div>
   );

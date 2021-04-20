@@ -8,6 +8,7 @@ import "./App.scss";
 import "./AgeScreen.scss";
 
 const AgeScreen = () => {
+  
   // Get access to session storage via custom hook.
   const [value, setValue] = useStateWithSessionStorage("myValueInLocalStorage");
 
