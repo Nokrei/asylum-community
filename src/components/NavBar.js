@@ -42,7 +42,7 @@ const NavBar = (props) => {
   return (
     <div>
       {!mobile ? (
-        <div style={props.style} className="top-nav blue-font creepy-font">
+        <div style={props.style} className="top-nav  creepy-font">
           <span className="top-nav__item">
             <Link to="/main#about">About Us</Link>
           </span>

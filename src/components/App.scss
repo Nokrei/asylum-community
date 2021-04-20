@@ -18,7 +18,9 @@
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
 }
-
+body {
+  background-color: #111012;
+}
 .white-font {
   @extend %font-settings;
   color: #e5e5e5;
