@@ -14,6 +14,7 @@ import Testimonials from "./Testimonials";
 import Emojis from "./Emojis";
 import Join from "./Join";
 //import(/*webpackPreload:true '*/ "../fonts/NothingYouCouldDo-Regular.ttf");
+
 const MainScreen = () => {
   // State variable to set when creepy font has loaded.
   const [fontIsReady, setFontisReady] = useState(false);
@@ -25,6 +26,7 @@ const MainScreen = () => {
       .load("12px NothingYouCouldDo")
       .then(() => setFontisReady(true));
   }, []);
+
   // Global state to catch scroll position
   const [globalState, setGlobalState] = useContext(AppContext);
 

@@ -68,18 +68,18 @@ const NavBar = (props) => {
           burgerBarClassName={burgerBarClass}
           width={300}
         >
-          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
+          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item  creepy-font">
             About Us
           </Link>
 
-          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
+          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item--blue  creepy-font">
             Staff
           </Link>
 
-          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
+          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item  creepy-font">
             Testimonials
           </Link>
-          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item accent-font creepy-font">
+          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item--blue  creepy-font">
             Join Us
           </Link>
         </Menu>

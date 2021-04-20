@@ -19,7 +19,7 @@
   position: relative;
   transition-duration: 1s;
 }
-.staff-card__blue{
+.staff-card__blue {
   @extend .staff-card;
 }
 .staff-card__text {
@@ -57,7 +57,7 @@
 }
 .staff-card__text--role {
   @extend .staff-card__text--tag;
-  margin-right:1rem
+  margin-right: 1rem;
 }
 
 .staff-card__image {
@@ -117,14 +117,13 @@
     border: 1px solid #b2696e;
     padding-bottom: 1rem;
   }
-  .staff-card__blue{
+  .staff-card__blue {
     display: grid;
     justify-items: center;
     width: 80vmin;
     margin-bottom: 5rem;
     border: 1px solid #9fb5db;
     padding-bottom: 1rem;
-   
   }
   .staff-card__image--container {
     position: relative;
@@ -165,8 +164,7 @@
     font-size: 1rem;
   }
   .staff-card__text--role {
-  
-    margin-right:0
+    margin-right: 0;
   }
   .staff-card__text--title {
     text-align: center;
@@ -194,8 +192,11 @@
     justify-items: center;
     width: 90vmin;
     margin-bottom: 5rem;
-    border: 1px solid white;
+    border: 1px solid #b2696e;
     padding-bottom: 1rem;
+  }
+  .staff-card__blue {
+    border: 1px solid #9fb5db;
   }
   .staff-card__image--container {
     position: relative;
