@@ -1,3 +1,52 @@
+.top-nav {
+  text-align: center;
+  color: #111012;
+  width: 70%;
+  margin: auto;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  background-color: rgba($color: #111012, $alpha: 0.9);
+}
+.top-nav__logo {
+  height: 4rem;
+}
+.top-nav__item {
+  align-self: center;
+  transition-duration: 0.2s;
+  text-shadow: 0 0 1px #b2696e, 0 0 4px #b2696e, 0 0 4px #b2696e,
+    0 0 4px #b2696e, 0 0 4px #b2696e, 0 0 4px #b2696e;
+  text-decoration: none;
+  color: white;
+}
+.top-nav__item--blue {
+  @extend .top-nav__item;
+  text-shadow: 0 0 1px #9fb5db, 0 0 4px #9fb5db, 0 0 4px #9fb5db,
+    0 0 4px #9fb5db, 0 0 4px #9fb5db, 0 0 4px #9fb5db;
+}
+.top-nav__item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-nav__item:hover {
+  color: #b2696e;
+  text-shadow: 0 0 5px black, 0 0 7px #b2696e, 0 0 9px #b2696e, 0 0 10px #b2696e,
+    0 0 10px #b2696e, 0 0 40px #b2696e;
+}
+.top-nav__item--blue:hover {
+  color: #9fb5db;
+  text-shadow: 0 0 5px black, 0 0 7px #9fb5db, 0 0 9px #9fb5db, 0 0 10px #9fb5db,
+    0 0 10px #9fb5db, 0 0 40px #9fb5db;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -17,9 +66,7 @@
 }
 .bm-burger-cross {
   background: #9fb5db;
- 
 }
-
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
@@ -41,8 +88,31 @@
 }
 /* General sidebar styles */
 .bm-menu {
-  
   background: #111012;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+}
+@media only screen and (max-width: 1025px) {
+  .top-nav__item {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    color: #b2696e;
+    text-shadow: none;
+  }
+  .top-nav__item--blue {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    color: #9fb5db;
+    text-shadow: none;
+  }
+  .top-nav__item:hover {
+    text-shadow: none;
+  }
+  .bm-menu-wrap {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+  }
 }

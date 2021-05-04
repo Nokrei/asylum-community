@@ -138,7 +138,7 @@ const ApproveEntry = () => {
           <br />
           <span
             style={{ fontSize: `calc(${textScale <= 6 && textScale}vw - 3vw)` }}
-            className="approve-text__medium accent-font"
+            className="approve-text__medium blue-font"
           >
             to the dark side
           </span>

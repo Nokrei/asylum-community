@@ -8,14 +8,13 @@ const Join = () => {
         <h1>Join us</h1>
       </div>
       <div className="join__content white-font">
-        What are you waiting for gamers? Join us now through
+        What are you waiting for gamers? 
         <a
           href="https://discord.gg/asylum669"
           target="blank"
           rel="noreferrer noopener"
         ><br/>
-          {" "}
-          https://discord.gg/asylum669{" "}
+        <button className='white-font'>Join our Discord</button>
         </a>
       </div>
       <iframe

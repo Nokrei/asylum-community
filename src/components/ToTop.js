@@ -4,7 +4,7 @@ import './App.scss'
 import "./ToTop.scss";
 const ToTop = (props) => {
   return (
-    <Link to="/main#home">
+    <Link to={props.link}>
       <div style={props.style} className="to-top ">
         ^
       </div>{" "}

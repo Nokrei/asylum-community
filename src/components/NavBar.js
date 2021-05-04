@@ -42,21 +42,30 @@ const NavBar = (props) => {
   return (
     <div>
       {!mobile ? (
-        <div style={props.style} className="top-nav  creepy-font">
+        <div style={props.style}  className="top-nav  creepy-font">
           <span className="top-nav__item">
             <Link to="/main#about">About Us</Link>
           </span>
           <span className="top-nav__item--blue">
             <Link to="/main#staff">Staff</Link>
           </span>
-          <img className="top-nav__logo" alt='logo' src={AsylumLogo} />
           <span className="top-nav__item">
             <Link to="/main#testimonials">Testimonials</Link>
           </span>
-
+          <img className="top-nav__logo" alt='logo' src={AsylumLogo} />
           <span className="top-nav__item--blue">
             <Link to="/main#join">Join Us</Link>
           </span>
+          <span className="top-nav__item">
+            <Link to="/merchandise">Merchandise</Link>
+          </span>
+          
+          <span className="top-nav__item--blue">
+            <Link to="/gallery">Gallery</Link>
+          </span>
+          
+
+        
         </div>
       ) : (
         <Menu
@@ -82,6 +91,8 @@ const NavBar = (props) => {
           <Link to="/main#join" onClick={toggleBurger} className="top-nav__item--blue  creepy-font">
             Join Us
           </Link>
+          <Link to="/merchandise" onClick={toggleBurger} className="top-nav__item  creepy-font">Merchandise</Link>
+          <Link to="/gallery" onClick={toggleBurger} className="top-nav__item--blue  creepy-font" >Gallery</Link>
         </Menu>
       )}
     </div>

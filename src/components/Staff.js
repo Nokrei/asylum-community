@@ -2,15 +2,14 @@ import React from "react";
 import "./App.scss";
 import "./Staff.scss";
 import StaffCard from "./StaffCard";
-import grace1 from "../images/grace1.png";
-import grace2 from "../images/grace2.png";
-import four1 from "../images/four1.png";
-import four2 from "../images/four2.png";
-import nonToxic from "../images/nonToxic.png";
-import typos from "../images/typos.png";
-import eliza from "../images/eliza.png";
-import nefarius from "../images/nefarius.png";
-import twinkle from "../images/twinkle.png";
+import grace1 from "../images/grace1.jpg";
+import grace2 from "../images/grace2.jpg";
+import four1 from "../images/four1.jpg";
+import four2 from "../images/four2.jpg";
+import nonToxic from "../images/nonToxic.jpg";
+import eliza from "../images/eliza.jpg";
+import nefarius from "../images/nefarius.jpg";
+import twinkle from "../images/twinkle.jpg";
 const Staff = () => {
   // left and right pass values to translateX in StaffCard
   const left = "-100%";
@@ -116,24 +115,6 @@ const Staff = () => {
         cardClass="staff-card__blue"
         direction={right}
         flex="row-reverse"
-        img={typos}
-        alt="SirTypos"
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ borderColor: "#9fb5db" }}
-        class="staff-card__image"
-        title="SirTypos"
-        role="@Psychiatrist"
-        tag="SirTypos#7891"
-        tags={{ justifySelf: "left" }}
-        titleColor={{ color: "#9fb5db" }}
-        desc="Hello there,
-        I'm Sirtypos here with the mods to assist, I make emojis, some are questionable, 
-        turned into a life coach, hope no lives ruined in the process, and having an interesting experience!
-        so come on in, meet new friends & get comfy!"
-      />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={left}
         img={twinkle}
         border1={{ borderColor: "#9fb5db" }}
         border2={{ borderColor: "#9fb5db" }}
@@ -142,6 +123,7 @@ const Staff = () => {
         alt="Twinkle"
         role="@Psychiatrist"
         tag="TwinkleToes#7587"
+        tags={{ justifySelf: "left" }}
         titleColor={{ color: "#9fb5db" }}
         desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19 and make sure everyone has a good time. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />

@@ -10,7 +10,7 @@
   opacity: 0;
 }
 .staff-card {
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -68,6 +68,7 @@
   position: relative;
   max-width: 12vw;
   height: auto;
+  
   animation: image1-animation 10s infinite;
 }
 

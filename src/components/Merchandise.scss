@@ -1,0 +1,21 @@
+.merchandise {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+.merchandise-text__big {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 12rem;
+    text-transform: uppercase;
+    color: #e5e5e5;
+  }
+
+  
+@media only screen and (max-width: 1025px) {
+  .merchandise-text__big {
+    width: 100%;
+    font-size: 3.5rem;
+  }
+}

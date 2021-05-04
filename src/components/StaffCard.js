@@ -16,12 +16,23 @@ const StaffCard = (props) => {
       style={{
         transform: `translateX(${inView ? 0 : props.direction})`,
         flexDirection: props.flex,
-       
       }}
     >
       <div className="staff-card__image--container" style={props.grid}>
-        <img className={props.class} src={props.img} alt={props.alt} />
-        <img className={props.class2} src={props.img2} alt={props.alt2} />
+        <img
+          className={props.class}
+          src={props.img}
+          alt={props.alt}
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
+        />
+        <img
+          className={props.class2}
+          src={props.img2}
+          alt={props.alt2}
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
+        />
       </div>
       <div className="staff-card__text white-font" style={props.grid2}>
         <div className="staff-card__text--top">

@@ -1,10 +1,18 @@
 import React from "react";
 import Slider from "infinite-react-carousel";
+import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../utils/useWindowDimensions";
 import "./App.scss";
 import "./Testimonials.scss";
 import TestimonialCard from "./TestimonialCard";
+import Donate from "./Donate";
 const Testimonials = () => {
+  // Use the react intersection observer to determine if a card is in the viewport
+  // and assing style accordingly.
+  const [ref, inView] = useInView({
+    threshold: 0,
+    delay: 1000,
+  });
   // Get client width from custom hook
   const { width } = useWindowDimensions();
 
@@ -16,7 +24,7 @@ const Testimonials = () => {
     numOfSlides = 3;
   } else if (width < 1500 && width > 1025) {
     numOfSlides = 2;
-  } else if (width <= 1025 ) {
+  } else if (width <= 1025) {
     numOfSlides = 1;
   }
 
@@ -87,7 +95,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="testimonials white-font" id="testimonials">
+    <div ref={ref} className="testimonials white-font" id="testimonials">
       <span className="testimonials__title accent-font creepy-font">
         <h1>Testimonials</h1>
       </span>
@@ -112,6 +120,7 @@ const Testimonials = () => {
           })}
         </Slider>
       </div>
+      <Donate style={{ transform: `translateX(${inView ? 0 : "-110%"})` }} />
     </div>
   );
 };

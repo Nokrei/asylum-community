@@ -36,14 +36,14 @@ const MainScreen = () => {
 
   // Handle scroll event, dynamically push values to variables
   const handleScroll = debounce((e) => {
-    setGlobalState({
-      scrollPosition:
-        e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop,
-    });
+  
 
     const currentScrollPos = e.target.scrollTop;
-    setVisible(
-      prevScrollPos > currentScrollPos + 10 || currentScrollPos < prevScrollPos
+    setGlobalState({
+      
+      visible: prevScrollPos > currentScrollPos + 10 || currentScrollPos < prevScrollPos
+    }
+      
     );
     setPrevScrollPos(currentScrollPos);
   }, 1);
@@ -66,23 +66,23 @@ const MainScreen = () => {
       <div onScroll={handleScroll} className="main-screen" id="main">
         <div>
           <animated.div style={fadeIn}>
-            <NavBar
-              style={{ top: visible ? "0" : "-200px", transition: "top 0.6s" }}
-            />
+            
             <Home style={{ opacity: ` ${1 - prevScrollPos / 500} ` }} />
             <About />
             <Staff />
             <Testimonials />
             <Emojis />
             <Join />
-            <ToTop
-              style={{
-                transform: visible ? `scale(0)` : "scale(1)",
-                transition: "all 0.2s",
-              }}
-            />
+           
           </animated.div>
         </div>
+        <ToTop
+        style={{
+          transform: globalState.visible ? `scale(0)` : "scale(1)",
+          transition: "all 0.2s",
+        }}
+        link="/main#about"
+      />
         <CookieConsent>
           This website uses cookies to enhance the user experience.
         </CookieConsent>
