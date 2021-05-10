@@ -21,7 +21,7 @@ const Join = () => {
         title='Discord widget'
         src="https://discord.com/widget?id=578264670805426245&theme=dark"
         width="350"
-        height="500"
+       
         allowtransparency="true"
         frameBorder="0"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

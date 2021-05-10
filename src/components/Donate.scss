@@ -3,8 +3,8 @@
   left: 0;
   bottom: 5rem;
   background-color: #b2696e;
-  padding: 0.5rem;
-  writing-mode: vertical-lr;
+  display: flex;
+  align-items: center;
   transition-duration: 0.5s;
   z-index: 2;
 }
@@ -28,5 +28,12 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .donate {
+    text-align: center;
+
+    writing-mode: vertical-rl;
   }
 }

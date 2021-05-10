@@ -13,6 +13,7 @@ import Staff from "./Staff";
 import Testimonials from "./Testimonials";
 import Emojis from "./Emojis";
 import Join from "./Join";
+import Footer from './Footer'
 //import(/*webpackPreload:true '*/ "../fonts/NothingYouCouldDo-Regular.ttf");
 
 const MainScreen = () => {
@@ -73,7 +74,7 @@ const MainScreen = () => {
             <Testimonials />
             <Emojis />
             <Join />
-           
+            <Footer/>
           </animated.div>
         </div>
         <ToTop
@@ -83,6 +84,7 @@ const MainScreen = () => {
         }}
         link="/main#about"
       />
+      
         <CookieConsent>
           This website uses cookies to enhance the user experience.
         </CookieConsent>

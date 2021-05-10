@@ -54,6 +54,7 @@ import { debounce } from "../utils/helpers";
 import AppContext from "./AppContext";
 import ImageCard from "./ImageCard";
 import ToTop from "./ToTop";
+import Footer from './Footer'
 import "./App.scss";
 import "./Gallery.scss";
 
@@ -295,6 +296,7 @@ const Gallery = () => {
         }}
         link="/gallery#top"
       />
+      <Footer/>
     </div>
   );
 };

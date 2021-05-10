@@ -113,15 +113,6 @@ const AgeScreen = () => {
               </DelayLink>
             </animated.div>
           </div>
-          <p style={{ position: "absolute", textDecoration: "none" }}>
-            Stock videos by{" "}
-            <a
-              style={{ color: "inherit", textDecoration: "inherit" }}
-              href="http://www.videezy.com/"
-            >
-              Videezy
-            </a>
-          </p>
          
         </div>
       ) : (

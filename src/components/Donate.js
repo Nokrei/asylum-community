@@ -6,7 +6,7 @@ const Donate = (props) => {
     <a href="https://www.buymeacoffee.com/Asylum669" rel="noreferrer noopener" target='_blank'>
       <div style={props.style} className="donate white-font">
       <img className='pill' src={pill}/>
-      Support your favourite Asylum with a refill 
+      <p>Support your favourite Asylum with a refill </p>
       <img className='pill' src={pill}/>
       </div>
       
