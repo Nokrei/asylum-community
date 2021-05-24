@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
-import bikini from "../images/gallery/bikini.jpg";
 import dictionary from "../images/gallery/dictionary.jpg";
 import elizaDraw from "../images/gallery/elizaDraw.jpg";
 import feralDraw from "../images/gallery/feralDraw.jpg";
-import feralApprove from "../images/gallery/feralApprove.jpg";
 import gameNight from "../images/gallery/gameNight.jpg";
 import graceDraw from "../images/gallery/graceDraw.jpg";
 import group from "../images/gallery/group.jpg";
@@ -12,10 +10,8 @@ import group2 from "../images/gallery/group2.jpg";
 import gonk from "../images/gallery/gonk.jpg";
 import gonk2 from "../images/gallery/gonk2.jpg";
 import gonk3 from "../images/gallery/gonk3.jpg";
-import junkrat from "../images/gallery/junkrat.jpg";
 import myrp from "../images/gallery/myrp.jpg";
 import oak from "../images/gallery/oak.jpg";
-import peachy from "../images/gallery/peachy.jpg";
 import room from "../images/gallery/room.jpg";
 import room3 from "../images/gallery/room3.jpg";
 import shrek from "../images/gallery/shrek.jpg";
@@ -25,12 +21,6 @@ import stack3 from "../images/gallery/stack3.jpg";
 import stack4 from "../images/gallery/stack4.jpg";
 import stack5 from "../images/gallery/stack5.jpg";
 import twinkle from "../images/gallery/twinkle.jpg";
-import voteFeral1 from "../images/gallery/voteFeral1.jpg";
-import voteFeral2 from "../images/gallery/voteFeral2.jpg";
-import voteFeral3 from "../images/gallery/voteFeral3.jpg";
-import voteJack from "../images/gallery/voteJack.jpg";
-import voteJack2 from "../images/gallery/voteJack2.jpg";
-import whitemane from "../images/gallery/whitemane.jpg";
 import quote1 from "../images/gallery/quotes/quote1.png";
 import quote2 from "../images/gallery/quotes/quote2.png";
 import quote3 from "../images/gallery/quotes/quote3.png";
@@ -39,7 +29,7 @@ import quote5 from "../images/gallery/quotes/quote5.png";
 import quote6 from "../images/gallery/quotes/quote6.png";
 import quote7 from "../images/gallery/quotes/quote7.png";
 import quote8 from "../images/gallery/quotes/quote8.png";
-import quote9 from "../images/gallery/quotes/quote9.png";
+
 import quote10 from "../images/gallery/quotes/quote10.png";
 import quote11 from "../images/gallery/quotes/quote11.png";
 import quote12 from "../images/gallery/quotes/quote12.png";
@@ -54,7 +44,7 @@ import { debounce } from "../utils/helpers";
 import AppContext from "./AppContext";
 import ImageCard from "./ImageCard";
 import ToTop from "./ToTop";
-import Footer from './Footer'
+import Footer from "./Footer";
 import "./App.scss";
 import "./Gallery.scss";
 
@@ -70,7 +60,6 @@ const Gallery = () => {
     quote6,
     quote7,
     quote8,
-    quote9,
     quote10,
     quote11,
     quote12,
@@ -82,26 +71,8 @@ const Gallery = () => {
     quote18,
     quote19,
   ];
-  const campaignArr = [
-    voteFeral1,
-    voteFeral2,
-    voteFeral3,
-    feralApprove,
-    voteJack,
-    voteJack2,
-  ];
-  const artArr = [
-    elizaDraw,
-    feralDraw,
-    graceDraw,
-    junkrat,
-    myrp,
-    oak,
-    peachy,
-    bikini,
-    twinkle,
-    whitemane,
-  ];
+
+  const artArr = [elizaDraw, feralDraw, graceDraw, myrp, oak, twinkle];
   const scienceArr = [
     gonk,
     gonk2,
@@ -119,7 +90,6 @@ const Gallery = () => {
   // State variable to store colors for gallery section titles.
   const [isActiveColor, setIsActiveColor] = useState({
     mainColor: "#9fb5db",
-    campaignColor: "#b2696e",
     artColor: "#b2696e",
     scienceColor: "#b2696e",
     quotesColor: "#b2696e",
@@ -132,16 +102,6 @@ const Gallery = () => {
       setIsActiveColor({
         mainColor: "#9fb5db",
         campaignColor: "#b2696e",
-        artColor: "#b2696e",
-        scienceColor: "#b2696e",
-        quotesColor: "#b2696e",
-      });
-    }
-    if (e.target.innerHTML === "meme campaign") {
-      setImageArr(campaignArr);
-      setIsActiveColor({
-        mainColor: "#b2696e",
-        campaignColor: "#9fb5db",
         artColor: "#b2696e",
         scienceColor: "#b2696e",
         quotesColor: "#b2696e",
@@ -230,15 +190,6 @@ const Gallery = () => {
           </span>
           <span
             onClick={handleGalleryChoice}
-            className="gallery-section gallery-section__campaign"
-            style={{
-              color: isActiveColor.campaignColor,
-            }}
-          >
-            meme campaign
-          </span>
-          <span
-            onClick={handleGalleryChoice}
             className="gallery-section gallery-section__art"
             style={{
               color: isActiveColor.artColor,
@@ -271,7 +222,7 @@ const Gallery = () => {
               src={focusImage}
               className={focusClass}
               onDragStart={(e) => e.preventDefault()}
-        onContextMenu={(e) => e.preventDefault()}
+              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
           <ScrollContainer hideScrollbars={false} className="gallery-content">
@@ -296,7 +247,7 @@ const Gallery = () => {
         }}
         link="/gallery#top"
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
