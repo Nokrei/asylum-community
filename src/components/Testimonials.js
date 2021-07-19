@@ -48,10 +48,6 @@ const Testimonials = () => {
     },
     { title: "NonToxic", content: `"This place dope."` },
     {
-      title: "Feral",
-      content: `"Great server with amazing people, that are very welcoming. Events happens frequently with variety and there's almost always someone to play with."`,
-    },
-    {
       title: "Pudding",
       content: `"I was covered in whalecum, had a great time, would recommend!"`,
     },
@@ -67,7 +63,6 @@ const Testimonials = () => {
       title: "LuckyOwl",
       content: `"I like the fact that I can be a part of this server it is a lot of fun. it's a really close community and even tho I just been part off the community for a couple days it has been already a lot off fun."`,
     },
-
     {
       title: "Celestial",
       content: `"I have enjoyed my stay thus far and im totally not having a knife on my neck writing this but I would like to admit before the judges of asylum669 that they are the role models of the depths of hell that I reside in"`,
@@ -87,10 +82,6 @@ const Testimonials = () => {
     {
       title: "Myrp",
       content: `"Asylum is super welcoming and the owner is the greatest person you'll ever meet. This place is super open minded and welcoming! Plus you get some whalecum when you join... ;)"`,
-    },
-    {
-      title: "Bloom",
-      content: `"Hello, it's your fellow hot e-girl here. this community is genuinely the best you can join, bunch of beautiful and talented, friendly people and the admins are AMAZING. Join if you want to see some gorgeous people xo"`,
     },
   ];
 

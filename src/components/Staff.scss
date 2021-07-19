@@ -68,7 +68,7 @@
   position: relative;
   max-width: 12vw;
   height: auto;
-  
+
   animation: image1-animation 10s infinite;
 }
 
@@ -77,6 +77,14 @@
   max-width: 12vw;
   max-height: auto;
   left: 0;
+
+  animation: image2-animation 10s infinite;
+}
+.staff-card__image3--animated {
+  position: absolute;
+  max-width: 12vw;
+  max-height: auto;
+  right: 0;
 
   animation: image2-animation 10s infinite;
 }
@@ -212,9 +220,11 @@
     max-width: 50vmin;
   }
 
-  .staff-card__image2--animated {
+  .staff-card__image2--animated,
+  .staff-card__image3--animated {
     max-width: 50vmin;
   }
+
   .staff-card__text {
     padding: 0;
     margin: 0;

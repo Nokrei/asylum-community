@@ -26,7 +26,7 @@ const Staff = () => {
         cardClass="staff-card"
         direction={left}
         img={eliza}
-        alt='Eliza'
+        alt="Eliza"
         class="staff-card__image"
         title="Eliza"
         role="@The Disease"
@@ -40,7 +40,7 @@ const Staff = () => {
         direction={right}
         flex="row-reverse"
         img={nefarius}
-        alt='Nefarius'
+        alt="Nefarius"
         border1={{ borderColor: "#9fb5db" }}
         border2={{ display: "none" }}
         class="staff-card__image"
@@ -66,7 +66,7 @@ const Staff = () => {
         class="staff-card__image--animated"
         class2="staff-card__image2--animated"
         title="GraceTheGreat1"
-        role="@Psychiatrist"
+        role="@Warden"
         desc="Hi, I'm Grace! I like games. I'm an American who moved to Norway for love. 
         You can find me playing Overwatch, working out, or just chilling with the server.
          My main job on Asylum 669 is coordinating game nights along with Feral and Dave. 
@@ -76,24 +76,6 @@ const Staff = () => {
         cardClass="staff-card__blue"
         direction={right}
         flex="row-reverse"
-        img={nonToxic}
-        alt="NonToxic"
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ borderColor: "#9fb5db" }}
-        class="staff-card__image"
-        title="NonToxic"
-        role="@Psychiatrist"
-        tag="NonToxic#1809"
-        tags={{ justifySelf: "left" }}
-        titleColor={{ color: "#9fb5db" }}
-        desc="A Smart person knows that a Tomato is a Fruit, but a wise person knows not to add into a fruit Salad. 
-        I am known as NonToxic, I am Married for almost 15 years, I have 2 Children and I am a Gamer for Life.
-         I Suffer from that disorder where I speak the truth and it pisses people off. If I have said something to offend you, please tell me. I may want to use it again.
-        I will leave you with this wisdom: Before you ask why someones dislikes you, ask yourself why do you give a fuck?"
-      />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={left}
         img={four1}
         img2={four2}
         alt="FoursAreLife"
@@ -101,31 +83,15 @@ const Staff = () => {
         border1={{ borderColor: "#9fb5db" }}
         border2={{ borderColor: "#9fb5db" }}
         class="staff-card__image--animated"
-        class2="staff-card__image2--animated"
+        class2="staff-card__image3--animated"
         title="FoursAreLife"
-        role="@Psychiatrist"
+        role="@Warden"
         tag="FoursAreLife#4444"
         titleColor={{ color: "#9fb5db" }}
         desc="Hey, my name is Fours, or more commonly DAV / Dave. I'm an IT student from 
         Austria and spend way too much time on the internet, and playing Destiny. My job is 
         mostly recruiting and hosting server events.
         "
-      />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={right}
-        flex="row-reverse"
-        img={twinkle}
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ borderColor: "#9fb5db" }}
-        class="staff-card__image"
-        title="Twinkle"
-        alt="Twinkle"
-        role="@Psychiatrist"
-        tag="TwinkleToes#7587"
-        tags={{ justifySelf: "left" }}
-        titleColor={{ color: "#9fb5db" }}
-        desc="Hey I'm Twinkle (Twonkle, Twonk, Twink, horni British mod or whatever you want to call me). I'm 19 and make sure everyone has a good time. I'm mainly responsible for recruiting and saying 'That's kinda hot'."
       />
     </div>
   );
