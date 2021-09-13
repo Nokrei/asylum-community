@@ -72,27 +72,6 @@ const Staff = () => {
          My main job on Asylum 669 is coordinating game nights along with Feral and Dave. 
          JOIN US. Subscribe to my OnlyChairs."
       />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={right}
-        flex="row-reverse"
-        img={four1}
-        img2={four2}
-        alt="FoursAreLife"
-        alt2="FoursAreLife2"
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ borderColor: "#9fb5db" }}
-        class="staff-card__image--animated"
-        class2="staff-card__image3--animated"
-        title="FoursAreLife"
-        role="@Warden"
-        tag="FoursAreLife#4444"
-        titleColor={{ color: "#9fb5db" }}
-        desc="Hey, my name is Fours, or more commonly DAV / Dave. I'm an IT student from 
-        Austria and spend way too much time on the internet, and playing Destiny. My job is 
-        mostly recruiting and hosting server events.
-        "
-      />
     </div>
   );
 };
