@@ -82,14 +82,16 @@ const Staff = () => {
         desc="Hello, I am Ghost, I'm basically the server's emotional punching bag 🙂 you can describe me in a few words: bean, melt and amazing."
       />
       <StaffCard
-        cardClass="staff-card"
+        cardClass="staff-card__blue"
         direction={left}
         img={myrp}
         alt="Myrp"
+        border1={{ borderColor: "#9fb5db" }}
         class="staff-card__image"
         title="Myrp"
         role="@Warden"
         border2={{ display: "none" }}
+        titleColor={{ color: "#9fb5db" }}
         desc="Heya! My name is Myrp, that one ginger on staff. I’m from the Netherlands born and raised! As one of the Wardens I like to be social and just hang around or play a few games, feel free to join whenever!"
       />
     </div>
