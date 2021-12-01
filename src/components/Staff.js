@@ -48,10 +48,7 @@ const Staff = () => {
         title="GraceTheGreat1"
         role="@The Disease"
         tags={{ justifySelf: "left" }}
-        desc="Hi, I'm Grace! I like games. I'm an American who moved to Norway for love. 
-        You can find me playing Overwatch, working out, or just chilling with the server.
-         My main job on Asylum 669 is coordinating game nights along with Feral and Dave. 
-         JOIN US. Subscribe to my OnlyChairs."
+        desc="Hi, I'm Grace! I like games. I'm an American who moved to Norway for love, but I found my true love in Dubai and within this community. Now I run this shit with my soulmate. Join us and bask in our glory!"
       />
       <StaffCard
         cardClass="staff-card__blue"
