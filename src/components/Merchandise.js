@@ -9,15 +9,15 @@ const Merchandise = () => {
     <div className="merchandise">
       <div className="red-bubble-container-outer">
         <div className="red-bubble-container">
-          <p class="white-font">
+          <p className="white-font">
             Check out our merchandise at
             <a
               href="https://www.redbubble.com/shop/ap/97972062"
               rel="noreferrer noopener"
               target="_blank"
-              className="accent-font"
+              className="top-nav__item "
             >
-              Red Bubble!
+              <span className="red-bubble-link">Red Bubble!</span>
             </a>{" "}
           </p>
           <a
@@ -25,11 +25,13 @@ const Merchandise = () => {
             rel="noreferrer noopener"
             target="_blank"
           >
-            <img
-              className="red-bubble-image"
-              src={redBubble}
-              alt="Asylum 669 red bubble"
-            />
+            <div className="red-bubble-image-container">
+              <img
+                className="red-bubble-image"
+                src={redBubble}
+                alt="Asylum 669 red bubble"
+              />
+            </div>
           </a>
         </div>
       </div>

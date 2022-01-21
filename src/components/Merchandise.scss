@@ -27,30 +27,39 @@
   justify-content: center;
   align-items: center;
 }
+.red-bubble-image-container {
+  overflow: hidden;
+}
 
 .red-bubble-image {
   max-width: 100%;
-  transition: 200ms;
+  transition: 300ms;
 }
 .red-bubble-image:hover {
-  opacity: 0.8;
+  transform: scale(1.2);
 }
 .red-bubble-container p {
   text-align: center;
   padding-bottom: 20px;
   font-size: 20px;
+  width: 100%;
 }
-.red-bubble-container p a {
-  text-decoration: underline;
-  text-decoration-color: transparent;
+
+.red-bubble-link {
   padding-left: 5px;
-  transition: 200ms;
+  font-size: 25px;
+  transition-duration: 0.2s;
+  text-shadow: 0 0 1px #b2696e, 0 0 4px #b2696e, 0 0 4px #b2696e,
+    0 0 4px #b2696e, 0 0 4px #b2696e, 0 0 4px #b2696e;
+  text-decoration: none;
+  color: white;
 }
-.red-bubble-container p a:hover {
-  text-decoration: underline;
-  text-decoration-color: #b2696e;
-  padding-left: 5px;
+.red-bubble-link:hover {
+  color: #b2696e;
+  text-shadow: 0 0 5px black, 0 0 7px #b2696e, 0 0 9px #b2696e, 0 0 10px #b2696e,
+    0 0 10px #b2696e, 0 0 40px #b2696e;
 }
+
 @media only screen and (max-width: 1025px) {
   .red-bubble-container-outer {
     width: 90%;
@@ -59,5 +68,8 @@
   .merchandise-text__big {
     width: 100%;
     font-size: 3.5rem;
+  }
+  .red-bubble-link {
+    display: block;
   }
 }
