@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="link">
             <p className="footer-title">Support Us</p>
             <a
-              href="https://www.buymeacoffee.com/Asylum669"
+              href="https://www.paypal.com/paypalme/WhyYouNoGiveMoney"
               rel="noreferrer noopener"
               target="_blank"
             >
