@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="link">
             <p className="footer-title">Follow Us</p>
             <a
-              href="https://www.twitch.tv/asylumdiscord"
+              href="https://www.twitch.tv/theasylum669"
               rel="noreferrer noopener"
               target="_blank"
             >
