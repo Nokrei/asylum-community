@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import "./Staff.scss";
 import StaffCard from "./StaffCard";
-import eliza from "../images/eliza.jpg";
+import eliza from "../images/eliza.png";
 import grace1 from "../images/grace1.jpg";
 import grace2 from "../images/grace2.jpg";
 import jack from "../images/jack-pic.png";

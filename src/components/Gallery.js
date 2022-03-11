@@ -5,15 +5,12 @@ import elizaDraw from "../images/gallery/elizaDraw.jpg";
 import feralDraw from "../images/gallery/feralDraw.jpg";
 import gameNight from "../images/gallery/gameNight.jpg";
 import graceDraw from "../images/gallery/graceDraw.jpg";
-import group from "../images/gallery/group.jpg";
-import group2 from "../images/gallery/group2.jpg";
 import gonk from "../images/gallery/gonk.jpg";
 import gonk2 from "../images/gallery/gonk2.jpg";
 import gonk3 from "../images/gallery/gonk3.jpg";
 import myrp from "../images/gallery/myrp.jpg";
 import oak from "../images/gallery/oak.jpg";
 import room from "../images/gallery/room.jpg";
-import room3 from "../images/gallery/room3.jpg";
 import shrek from "../images/gallery/shrek.jpg";
 import stack1 from "../images/gallery/stack1.jpg";
 import stack2 from "../images/gallery/stack2.jpg";
@@ -50,7 +47,7 @@ import "./Gallery.scss";
 
 const Gallery = () => {
   // Arrays for images.
-  const mainArr = [dictionary, gameNight, group, group2, room, room3, shrek];
+  const mainArr = [dictionary, gameNight, room, shrek];
   const quotesArr = [
     quote1,
     quote2,
