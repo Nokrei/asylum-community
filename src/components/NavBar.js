@@ -42,34 +42,24 @@ const NavBar = (props) => {
   return (
     <div>
       {!mobile ? (
-        <div style={props.style}  className="top-nav  creepy-font">
+        <div style={props.style} className="top-nav  creepy-font">
           <span className="top-nav__item">
             <Link to="/main#about">About Us</Link>
           </span>
+
           <span className="top-nav__item--blue">
-            <Link to="/main#staff">Staff</Link>
-          </span>
-          <span className="top-nav__item">
             <Link to="/main#testimonials">Testimonials</Link>
           </span>
-          <img className="top-nav__logo" alt='logo' src={AsylumLogo} />
-          <span className="top-nav__item--blue">
+          <img className="top-nav__logo" alt="logo" src={AsylumLogo} />
+          <span className="top-nav__item">
             <Link to="/main#join">Join Us</Link>
           </span>
-          <span className="top-nav__item">
+          <span className="top-nav__item--blue">
             <Link to="/merchandise">Merchandise</Link>
           </span>
-          
-          <span className="top-nav__item--blue">
-            <Link to="/gallery">Gallery</Link>
-          </span>
-          
-
-        
         </div>
       ) : (
         <Menu
-          
           isOpen={toggleMenu}
           onOpen={toggleBurger}
           onClose={toggleBurger}
@@ -77,22 +67,50 @@ const NavBar = (props) => {
           burgerBarClassName={burgerBarClass}
           width={300}
         >
-          <Link to="/main#about" onClick={toggleBurger} className="top-nav__item  creepy-font">
+          <Link
+            to="/main#about"
+            onClick={toggleBurger}
+            className="top-nav__item  creepy-font"
+          >
             About Us
           </Link>
 
-          <Link to="/main#staff" onClick={toggleBurger} className="top-nav__item--blue  creepy-font">
+          {/* <Link
+            to="/main#staff"
+            onClick={toggleBurger}
+            className="top-nav__item--blue  creepy-font"
+          >
             Staff
-          </Link>
+          </Link> */}
 
-          <Link to="/main#testimonials" onClick={toggleBurger} className="top-nav__item  creepy-font">
+          <Link
+            to="/main#testimonials"
+            onClick={toggleBurger}
+            className="top-nav__item--blue  creepy-font"
+          >
             Testimonials
           </Link>
-          <Link to="/main#join" onClick={toggleBurger} className="top-nav__item--blue  creepy-font">
+          <Link
+            to="/main#join"
+            onClick={toggleBurger}
+            className="top-nav__item  creepy-font"
+          >
             Join Us
           </Link>
-          <Link to="/merchandise" onClick={toggleBurger} className="top-nav__item  creepy-font">Merchandise</Link>
-          <Link to="/gallery" onClick={toggleBurger} className="top-nav__item--blue  creepy-font" >Gallery</Link>
+          <Link
+            to="/merchandise"
+            onClick={toggleBurger}
+            className="top-nav__item--blue  creepy-font"
+          >
+            Merchandise
+          </Link>
+          {/* <Link
+            to="/gallery"
+            onClick={toggleBurger}
+            className="top-nav__item--blue  creepy-font"
+          >
+            Gallery
+          </Link> */}
         </Menu>
       )}
     </div>

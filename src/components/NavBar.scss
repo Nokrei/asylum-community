@@ -1,5 +1,6 @@
 .top-nav {
   text-align: center;
+
   color: #111012;
   width: 70%;
   margin: auto;
@@ -7,7 +8,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(5, 1fr);
   position: fixed;
   left: 0;
   right: 0;
@@ -17,6 +18,7 @@
 }
 .top-nav__logo {
   height: 4rem;
+  margin: auto;
 }
 .top-nav__item {
   align-self: center;

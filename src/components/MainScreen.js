@@ -13,7 +13,7 @@ import Staff from "./Staff";
 import Testimonials from "./Testimonials";
 import Emojis from "./Emojis";
 import Join from "./Join";
-import Footer from './Footer'
+import Footer from "./Footer";
 //import(/*webpackPreload:true '*/ "../fonts/NothingYouCouldDo-Regular.ttf");
 
 const MainScreen = () => {
@@ -37,15 +37,12 @@ const MainScreen = () => {
 
   // Handle scroll event, dynamically push values to variables
   const handleScroll = debounce((e) => {
-  
-
     const currentScrollPos = e.target.scrollTop;
     setGlobalState({
-      
-      visible: prevScrollPos > currentScrollPos + 10 || currentScrollPos < prevScrollPos
-    }
-      
-    );
+      visible:
+        prevScrollPos > currentScrollPos + 10 ||
+        currentScrollPos < prevScrollPos,
+    });
     setPrevScrollPos(currentScrollPos);
   }, 1);
 
@@ -67,24 +64,23 @@ const MainScreen = () => {
       <div onScroll={handleScroll} className="main-screen" id="main">
         <div>
           <animated.div style={fadeIn}>
-            
             <Home style={{ opacity: ` ${1 - prevScrollPos / 500} ` }} />
             <About />
-            <Staff />
+
             <Testimonials />
             <Emojis />
             <Join />
-            <Footer/>
+            <Footer />
           </animated.div>
         </div>
         <ToTop
-        style={{
-          transform: globalState.visible ? `scale(0)` : "scale(1)",
-          transition: "all 0.2s",
-        }}
-        link="/main#about"
-      />
-      
+          style={{
+            transform: globalState.visible ? `scale(0)` : "scale(1)",
+            transition: "all 0.2s",
+          }}
+          link="/main#about"
+        />
+
         <CookieConsent>
           This website uses cookies to enhance the user experience.
         </CookieConsent>
