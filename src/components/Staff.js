@@ -53,34 +53,6 @@ const Staff = () => {
       <StaffCard
         cardClass="staff-card__blue"
         direction={left}
-        img={jack}
-        alt="Jack"
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ display: "none" }}
-        class="staff-card__image"
-        title="Jack"
-        role="@Warden"
-        titleColor={{ color: "#9fb5db" }}
-        desc="Hi, I'm Jack, your friendly neighborhood Gay. I live in the UK and spend most of my time playing video games or complaining. Come have a look around."
-      />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={right}
-        flex="row-reverse"
-        img={ghost}
-        alt="Ghost"
-        border1={{ borderColor: "#9fb5db" }}
-        border2={{ display: "none" }}
-        class="staff-card__image"
-        title="Ghost"
-        role="@Warden"
-        tags={{ justifySelf: "left" }}
-        titleColor={{ color: "#9fb5db" }}
-        desc="Hello, I am Ghost, I'm basically the server's emotional punching bag 🙂 you can describe me in a few words: bean, melt and amazing."
-      />
-      <StaffCard
-        cardClass="staff-card__blue"
-        direction={left}
         img={myrp}
         alt="Myrp"
         border1={{ borderColor: "#9fb5db" }}
