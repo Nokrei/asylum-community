@@ -8,7 +8,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "infinite-react-carousel": "^1.2.11",
-    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-burger-menu": "^3.0.6",
     "react-cookie-consent": "^6.2.3",
@@ -50,6 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }

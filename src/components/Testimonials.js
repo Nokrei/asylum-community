@@ -68,10 +68,6 @@ const Testimonials = () => {
       content: `"I have enjoyed my stay thus far and im totally not having a knife on my neck writing this but I would like to admit before the judges of asylum669 that they are the role models of the depths of hell that I reside in"`,
     },
     {
-      title: "Dottie",
-      content: `"Joined for the nsfw, stayed for the family."`,
-    },
-    {
       title: "Deez",
       content: `"Asylum 669, best server I've joined in ages. Movie nights, Game nights with prizes  and a great community of people."`,
     },

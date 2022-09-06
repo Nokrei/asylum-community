@@ -4,7 +4,6 @@ import "./App.scss";
 import "./About.scss";
 
 const About = () => {
-
   return (
     <div className="about white-font" id="about">
       <span className="about__title accent-font creepy-font">
@@ -29,8 +28,7 @@ const About = () => {
             Like a phoenix we rise from the ashes!
             <br />
             <br />
-            COMMUNITY GAMING FRIENDSHIP MOVIES GIVEAWAYS E-GIRLS NSFW CUSTOM
-            EMOJIS?
+            COMMUNITY GAMING FRIENDSHIP MOVIES GIVEAWAYS E-GIRLS CUSTOM EMOJIS?
             <br />
             <br />
             There should only be one thing that comes to mind when you hear
