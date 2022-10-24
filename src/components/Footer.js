@@ -64,7 +64,7 @@ const Footer = () => {
               Nokrei
             </a>{" "}
           </p>
-          <p>Emojis design: Rosa & SirTypos</p>
+          <p>Emojis design: Myrp, Eliza & Sirtypos</p>
           <p>
             {" "}
             Stock videos by{" "}

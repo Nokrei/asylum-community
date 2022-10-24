@@ -5,10 +5,9 @@ import StaffCard from "./StaffCard";
 import eliza from "../images/eliza.png";
 import grace1 from "../images/grace1.jpg";
 import grace2 from "../images/grace2.jpg";
-import jack from "../images/jack-pic.png";
-import ghost from "../images/ghost-pic.png";
 import myrp from "../images/myrp-pic.png";
 
+// Component not in use, keeping it just in case so that I don't have to remake it if needed again.
 const Staff = () => {
   // left and right pass values to translateX in StaffCard
   const left = "-100%";

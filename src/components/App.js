@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { HashRouter, Switch } from "react-router-dom";
 import AppContext from "./AppContext";
 import LayoutRoute from "./LayoutRoute";
-import LayoutRoute2 from './LayoutRoute2'
+import LayoutRoute2 from "./LayoutRoute2";
 import "./App.scss";
 import AgeScreen from "./AgeScreen";
 import DenyEntry from "./DenyEntry";
 import ApproveEntry from "./ApproveEntry";
 import MainScreen from "./MainScreen";
 import Merchandise from "./Merchandise";
-import Gallery from './Gallery'
 
 function App() {
   const [globalState, setGlobalState] = useState({
     changeLaout: false,
     scrollPosition: 0,
     isAdult: false,
-    visible:true
+    visible: true,
   });
 
   return (
@@ -32,8 +31,11 @@ function App() {
               component={ApproveEntry}
             />
             <LayoutRoute2 path="/main" exact={true} component={MainScreen} />
-            <LayoutRoute2 path="/merchandise" exact={true} component={Merchandise} />
-            <LayoutRoute2 path="/gallery" exact={true} component={Gallery} />
+            <LayoutRoute2
+              path="/merchandise"
+              exact={true}
+              component={Merchandise}
+            />
           </Switch>
         </HashRouter>
       </AppContext.Provider>

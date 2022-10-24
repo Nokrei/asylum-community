@@ -4,8 +4,6 @@ import "./App.scss";
 import "./Emojis.scss";
 import coinA from "../images/emojis/CoinA.png";
 import egirl from "../images/emojis/Egirl.png";
-import eliza1 from "../images/emojis/Eliza1.png";
-import eliza2 from "../images/emojis/Eliza2.png";
 import eThot2 from "../images/emojis/EThot2.png";
 import horny from "../images/emojis/Horny.png";
 import idiot from "../images/emojis/Idiot.png";
@@ -18,6 +16,13 @@ import toxic from "../images/emojis/Toxic.png";
 import tuneJustRight from "../images/emojis/TuneJustRight.png";
 import unamusedQ from "../images/emojis/UnamusedQ.png";
 import whipping from "../images/emojis/Whipping.png";
+import one from "../images/emojis/1.webp";
+import two from "../images/emojis/2.webp";
+import three from "../images/emojis/3.webp";
+import four from "../images/emojis/4.webp";
+import five from "../images/emojis/5.webp";
+import six from "../images/emojis/6.webp";
+import seven from "../images/emojis/7.webp";
 
 const Emojis = () => {
   // Use the react intersection observer to determine if emojis are in the viewport.
@@ -34,8 +39,6 @@ const Emojis = () => {
   const emojiArr = [
     coinA,
     egirl,
-    eliza1,
-    eliza2,
     eThot2,
     horny,
     idiot,
@@ -48,6 +51,13 @@ const Emojis = () => {
     tuneJustRight,
     unamusedQ,
     whipping,
+    one,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
   ];
 
   return (
@@ -70,7 +80,7 @@ const Emojis = () => {
         className="emojis__title white-font"
         style={{ transitionProperty: `opacity`, opacity: inView ? 1 : 0 }}
       >
-        Custom Emojis created by Rosa and SirTypos
+        Custom Emojis created by Myrp, Eliza & Sirtypos
       </div>
     </div>
   );
